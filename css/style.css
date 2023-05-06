@@ -6,3 +6,19 @@ body{
 main{
     flex-grow: 1;
 }
+
+.color{
+    background-color: chartreuse;
+}
+.letra{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tamaño{
+    font-weight: 900;
+}
+
+.alinear{
+    align-items: end;
+}
+
