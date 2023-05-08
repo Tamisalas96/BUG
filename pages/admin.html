@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esta pagina es un proyecto grupal en RollingCode school sobre una pagina de juegos"
+    />
+    <meta name="keywords" content="html, css, JavaScript, bootstrap, juegos" />
+    <meta
+      name="author"
+      content="Bruno Nicolas	Leonard, Matias Emanuel	Ruiz Villalobo, Lucio Lazarte, Santiago Alejandro Escobar Torres, Tamara Salas"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>BUG</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg color">
+        <div class="container-fluid color">
+          <a class="navbar-brand letra tamaño" href="./index.html">BUG</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Login</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar..."
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container-fluid my-3">
+        <h2 class="text-center">Administrador de juegos</h2>
+        <hr />
+        <p>
+          Agregar juego:
+          <button
+            id=""
+            class="btn btn-outline-success"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-admin-juegos"
+          >
+            <i class="bi bi-controller"></i>
+          </button>
+        </p>
+        <h3>lista de juegos</h3>
+        <hr />
+        <article class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Resident Evil 4</td>
+                <td class="text-truncate ancho pe-5">
+                  Resident Evil 4 es un videojuego de acción-aventura de
+                  disparos en tercera persona perteneciente al subgénero de
+                  terror y supervivencia desarrollado por Capcom y estrenado el
+                  24 de marzo del 2023. El videojuego es una nueva versión del
+                  videojuego de 2005 del mismo nombre.
+                </td>
+                <td class="text-truncate ancho pe-5">5000$</td>
+                <td>Aventura</td>
+                <td>
+                  <button type="button" class="btn btn-warning mx-1">
+                    <i class="bi bi-pencil-square"></i></button
+                  ><button
+                    type="button"
+                    class="btn btn-danger mx-1"
+                  >
+                    <i class="bi bi-x-square"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Resident Evil 4</td>
+                <td class="text-truncate ancho pe-5">
+                  Resident Evil 4 es un videojuego de acción-aventura de
+                  disparos en tercera persona perteneciente al subgénero de
+                  terror y supervivencia desarrollado por Capcom y estrenado el
+                  24 de marzo del 2023. El videojuego es una nueva versión del
+                  videojuego de 2005 del mismo nombre.
+                </td>
+                <td class="text-truncate ancho pe-5">5000$</td>
+                <td>Aventura</td>
+                <td>
+                  <button type="button" class="btn btn-warning mx-1">
+                    <i class="bi bi-pencil-square"></i></button
+                  ><button
+                    type="button"
+                    class="btn btn-danger mx-1"
+                  >
+                    <i class="bi bi-x-square"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <!-- Modal Administrar Juegos -->
+        <div
+          class="modal fade"
+          id="modal-admin-juegos"
+          tabindex="-1"
+          aria-labelledby="Modal_Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="Modal_Label">
+                  Administrar Juegos
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="formPelicula">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="codigo" class="form-label">Código</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        aria-label="codigo"
+                        id="codigo"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="nombre" class="form-label">Nombre *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ej: Super Mario Bros"
+                        aria-label="nombre
+                          id="
+                        nombre
+                        maxlength="30"
+                        minlength="3"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="descripcion" class="form-label"
+                        >Descripción *</label
+                      >
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        placeholder=""
+                        aria-label="descripcion"
+                        id="descripcion"
+                        maxlength="1000"
+                        minlength="3"
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="col-12">
+                        <label for="categoria" class="form-label"
+                          >Categoria *</label
+                        >
+                        <select
+                          class="form-select"
+                          aria-label="categoria"
+                          id="categoria"
+                        >
+                          <option selected value="">
+                            Seleccione una opción
+                          </option>
+                          <option value="sandbox">sandbox</option>
+                          <option value="simulación">simulación</option>
+                          <option value="fabricación">fabricación</option>
+                          <option value="construcción">construcción</option>
+                          <option value="aventura">aventura</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label for="precio" class="form-label">Precio *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          aria-label="precio"
+                          placeholder="5000"
+                          id="precio"
+                          min="1"
+                          max="10000"
+                        />
+                      </div>
+                      <label for="imagen" class="form-label">Imágen</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="https://upload.wikimedia.org/wikipedia/commons/5/52/Spider-Man.jpg"
+                        aria-label="imagen"
+                        id="imagen"
+                        maxlength="300"
+                        minlength="3"
+                      />
+                    </div>
+                    <div class="col-12"></div>
+                    <div class="col-12">
+                      <label for="desarrolador" class="form-label"
+                        >Desarrolador</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        aria-label="desarrolador"
+                        placeholder="Nintendo"
+                        id="desarrolador"
+                      />
+                    </div>
+
+                    <button id="" type="submit" class="btn btn-outline-success">
+                      Enviar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <footer class="bg-dark text-secondary py-4">
+      <p class="text-light text-center">&169 Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
