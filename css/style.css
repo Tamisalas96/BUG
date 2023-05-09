@@ -64,3 +64,39 @@ a{
 .links-color:hover{
     color: #6C0607;
 }
+
+.seccion {
+    height: 700px;
+    background-attachment: fixed;
+  }
+  
+  .seccion:nth-child(2) {
+    background-image: url(../img/409879-liquid-4K-abstract.jpg);
+  }
+  
+  .seccion1 {
+    height: 700px;
+    background-attachment: fixed;
+  }
+  
+  .seccion1:nth-child(3) {
+    background-image: url(../img/recorte.png);
+  }
+  
+  .seccion2 {
+      height: 700px;
+      background-attachment: fixed;
+    }
+    
+    .seccion2:nth-child(1) {
+      background-image: url(../img/recorte.png);
+    }
+  
+  .text3d{
+    text-shadow: 3px 1px 3px #000000;
+  }
+  
+  .text-neon{
+    text-shadow: red -3px 0, cyan 3px 0;
+    filter: blur(.9px);
+  }
