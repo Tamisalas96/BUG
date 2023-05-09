@@ -100,3 +100,16 @@ a{
     text-shadow: red -3px 0, cyan 3px 0;
     filter: blur(.9px);
   }
+
+  .cards-disenio{
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+   border: none;
+}
+
+.cards-disenio:hover{
+
+   box-shadow:       
+   inset 0 -3em 3em rgba(0,0,0,0.1),
+   0.3em 0.3em 1em rgba(0,0,0,0.3);;
+}
