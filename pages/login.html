@@ -28,11 +28,11 @@
                     <a class="nav-link" href="./nosotros.html">Acerca de nosotros</a>
                   </li> 
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./">Login</a>
+                    <a class="nav-link" aria-current="page" href="./login.html">Login</a>
                   </li>
                   </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
                   <button class="btn btn-outline-dark" type="submit">Buscar</button>
                 </form>
@@ -40,7 +40,27 @@
             </div>
           </nav>
     </header>
-    <main></main>
+    <main>
+        <form class="login row mt-4 g-2 align-content-center flex-column">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                <label for="email" class="form-label text-dark ps-2">Escriba su email y contraseña</label>
+                <input class="form-control text-bg-light rounded border-0" type="email" required id="email" placeholder="Email@ejemplo.com" minlength="14" maxlength="64">
+            </div>
+  
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+                <label for="inputPassword" class="visually-hidden">Contraseña</label> 
+                <input type="password" class="form-control text-bg-light rounded border-0" required id="inputPassword" placeholder="Contraseña" minlength="6" maxlength="64">
+   
+            </div>        
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+              <button type="submit" class="btn btn-danger mb-3 rounded w-100 text-light fw-bold">CONTINUAR</button>
+            </div>
+            <aside class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 text-center text-secondary px-2">
+              <p class="d-inline">¿Primer BUG?</p>
+              <a href="../pages/registro.html" class="text-danger">Registrarse</a>
+            </aside>
+          </form>
+    </main>
     <footer class="bg-dark text-secondary py-4" >
         <p class="text-light text-center">&#169 Todos los derechos reservados</p>
     </footer>
