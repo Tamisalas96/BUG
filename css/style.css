@@ -52,3 +52,15 @@ main{
     background-color: #6C0607;
     filter: blur(90%);
 }
+
+a{
+    text-decoration: none;
+}
+
+.links-color{
+    color: #b9090b;
+}
+
+.links-color:hover{
+    color: #6C0607;
+}
