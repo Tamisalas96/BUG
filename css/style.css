@@ -125,3 +125,19 @@ a{
    0.3em 0.3em 1em rgba(0,0,0,0.3);;
 }
 
+.fondo-imagen {
+  background-image: url(../img/img_background_error404.dff07b56.jpg);
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.texto-centrado{
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  right: 15%;
+}
