@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>   
-        <nav class="navbar navbar-expand-lg color">
+        <nav class="navbar navbar-expand-lg colorNav">
             <div class="container-fluid color">
                 <a class="navbar-brand letra tamaño" href="../index.html">BUG</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,25 +41,27 @@
           </nav>
     </header>
     <main>
-        <form class="login row mt-4 g-2 align-content-center flex-column">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+      <section class="container d-flex justify-content-center">
+        <form class="row mt-4 g-2 align-content-center flex-column card-login mt-5 col-xl-6 col-12">
+          <div class="col-sm-8 col-lg-4 col-xl-8 mt-5">
+              <h2>Iniciar sesion</h2>
+              <hr>
                 <label for="email" class="form-label text-dark ps-2">Escriba su email y contraseña</label>
-                <input class="form-control text-bg-light rounded border-0" type="email" required id="email" placeholder="Email@ejemplo.com" minlength="14" maxlength="64">
+                <input class="form-control text-bg-light rounded-0 border-0 mt-3" type="email" required id="email" placeholder="Email@ejemplo.com" minlength="14" maxlength="64">
             </div>
-  
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-sm-8 col-lg-4 col-xl-8 mt-3">
                 <label for="inputPassword" class="visually-hidden">Contraseña</label> 
-                <input type="password" class="form-control text-bg-light rounded border-0" required id="inputPassword" placeholder="Contraseña" minlength="6" maxlength="64">
-   
+                <input type="password" class="form-control text-bg-light rounded-0 border-0" required id="inputPassword" placeholder="Contraseña" minlength="6" maxlength="64">
             </div>        
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
-              <button type="submit" class="btn btn-danger mb-3 rounded w-100 text-light fw-bold">CONTINUAR</button>
+            <div class="col-sm-8 col-lg-4 col-xl-8 mt-4">
+              <button type="submit" class="btn btn-red mb-3 rounded-0 w-100 text-light fw-bold">CONTINUAR</button>
             </div>
-            <aside class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 text-center text-secondary px-2">
+            <aside class="col-sm-8 col-lg-4 col-xl-8 text-center text-secondary px-2 mb-5">
               <p class="d-inline">¿Primer BUG?</p>
               <a href="../pages/registro.html" class="text-danger">Registrarse</a>
             </aside>
           </form>
+      </section>
     </main>
     <footer class="bg-dark text-secondary py-4" >
         <p class="text-light text-center">&#169 Todos los derechos reservados</p>
