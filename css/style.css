@@ -150,3 +150,25 @@ a{
   left: 15%;
   right: 15%;
 }
+
+
+@media all and (min-width: 1px) and (max-width: 767px) {
+  .banner {
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media all and (min-width: 767px) and (max-width: 921px) {
+  .banner {
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media all and (min-width: 1201px) and (max-width: 2000px) {
+  .banner {
+    height: 500px;
+    object-fit: cover;
+  }
+}
