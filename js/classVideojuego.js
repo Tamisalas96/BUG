@@ -6,7 +6,7 @@ export default class Videojuego{
     #imagen;
     #requisitos;
     #desarrollador;
-    #reseñas;
+    #resenias;
 
     constructor(codigo = uuidv4(),nombre,precio,categoria,imagen,requisitos,desarrollador,reseñas){
         this.#codigo = codigo;
@@ -48,7 +48,7 @@ export default class Videojuego{
         this.#codigo = codigo;
     }
     set nombre(nombre){
-        this.#codigo = codigo;
+        this.#nombre = nombre;
     }
     set precio(precio){
         this.#precio = precio;
