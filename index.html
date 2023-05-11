@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="https://kit.fontawesome.com/61b9fbaaa5.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Esta pagina es un proyecto grupal en RollingCode school sobre una pagina de juegos">
     <meta name="keywords" content="html, css, JavaScript, bootstrap, juegos">
-    <meta name="author" content="Bruno Nicolas	Leonard, Matias Emanuel	Ruiz Villalobo, Lucio Lazarte, Santiago Alejandro Escobar Torres, Tamara Salas">
+    <meta name="author" content="Bruno Nicolas	Leonard, Matias Emanuel	Ruiz Villalobo, Lucio Lazarte, Santiago Alejandro Escobar Torres Tamara Salas">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -14,7 +15,7 @@
 </head>
 <body>
     <header>   
-        <nav class="navbar navbar-expand-lg  colorNav">
+        <nav class="navbar navbar-expand-lg colorNav">
             <div class="container-fluid ">
                 <a class="navbar-brand letra tamaño" href="./index.html">BUG</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +27,20 @@
                     <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de nosotros</a>
+                    <a class="nav-link" href="./pages/nosotros.html">Acerca de nosotros</a>
                   </li> 
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./pages/login.html">Login</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-sharp fa-solid fa-moon"></i>
+                    </span>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" id="btnThemeDark" ><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
+                      <li><button class="dropdown-item" id="btnThemeLight"><i class="bi bi-brightness-high-fill"></i> Light</button></li>
+                     
+                    </ul>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -59,7 +70,7 @@
               <button class="btn btn-red rounded-0 text-light">Explorar ></button>
             </div>
           </div>
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <img src="./img/carrousel2.jpg" class="w-100 banner" alt="...">
             <div class="carrousel-text2 text-light">
               <h5 class="display-4 fw-bold">Ofertas imperdibles.</h5>
@@ -67,7 +78,7 @@
               <button class="btn btn-red rounded-0 text-light">Explorar ></button>
             </div>
           </div>
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <img src="./img/carrusel3.jpg" class="w-100 banner" alt="...">
             <div class="carrousel-text text-light">
               <h5 class="display-4 fw-bold">MINECRAFT</h5>
@@ -90,31 +101,31 @@
       </section>
       <section class="container">
         <article class="row mt-5 mb-5">
-          <a href="./pages/accion.html" class="col-md-4 mb-3 links-color">
+          <a href="./pages/error404.html" class="col-md-4 mb-3 links-color">
             <img
               src="https://assets.xboxservices.com/assets/61/9f/619fc5fa-5b2d-4b16-aaed-ce058d28f5c1.svg?n=Games-Hub_Content-Placement-0_Action-Adventure_788x444.svg"
               alt="Aventura">
             <h5 class="fw-bold">Accion y aventura <i class="bi bi-chevron-compact-right"></i></h5>
           </a>
-          <a href="" class="col-md-4 mb-3 links-color">
+          <a href="./pages/error404.html" class="col-md-4 mb-3 links-color">
             <img
               src="https://assets.xboxservices.com/assets/18/ef/18ef63f3-484f-4105-bf51-c9c900590178.svg?n=Games-Hub_Content-Placement-0_Indie_788x444.svg"
               alt="Indie" class="w-100">
             <h5 class="fw-bold">Indie <i class="bi bi-chevron-compact-right"></i></h5>
           </a>
-          <a href="" class="col-md-4 mb-3 links-color">
+          <a href="./pages/error404.html" class="col-md-4 mb-3 links-color">
             <img
               src="https://assets.xboxservices.com/assets/28/58/2858715b-d09c-4eed-9a78-4909cfc41061.svg?n=Games-Hub_Content-Placement-0_Roleplaying_788x444.svg"
               alt="Rol" class="w-100">
             <h5 class="fw-bold">Juegos de rol <i class="bi bi-chevron-compact-right"></i></h5>
           </a>
-          <a href="" class="col-md-4 mb-3 links-color">
+          <a href="./pages/error404.html" class="col-md-4 mb-3 links-color">
             <img
               src="https://assets.xboxservices.com/assets/b4/e4/b4e44ebb-2ca6-43bb-b8d8-86940b9e974f.svg?n=Games-Hub_Content-Placement-0_Shooters_788x444.svg"
               alt="Shooters" class="w-100">
             <h5 class="fw-bold">Shooters <i class="bi bi-chevron-compact-right"></i></h5>
           </a>
-          <a href="" class="col-md-4 mb-3 links-color">
+          <a href="./pages/error404.html" class="col-md-4 mb-3 links-color">
             <img
               src="https://assets.xboxservices.com/assets/81/a5/81a58a44-912f-4aa9-b0cf-ea028c865e2c.svg?n=Games-Hub_Content-Placement-0_Sports_788x444.svg"
               alt="Deportes" class="w-100">
@@ -135,10 +146,10 @@
           <h2 class="display-4 fw-bold mt-5 mb-5">Nuevos lanzamientos</h2>
           <article class="row" id="listajuegos">
             <aside class="col-md-6 col-lg-3 mb-3">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/qRplKbpzcLSWT3PB4Gu7t4NB.webp" class="card-img-top rounded-0" alt="MBL SHOW" />
                 <div class="card-body">
-                  <h5 class="card-title">MBL The Show <span class="badge rounded-pill text-bg-warning">Nuevo</span></h5>
+                  <h5 class="card-title">MBL The Show</h5>
                   <p class="card-text">
                     Deportes
                   </p>
@@ -148,11 +159,10 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/cs2.jpg" class="card-img-top rounded-0" alt="Counter Strike 2" />
                 <div class="card-body">
-                  <h5 class="card-title">Counter Strike 2 <span class="badge rounded-pill text-bg-warning">Nuevo</span>
-                  </h5>
+                  <h5 class="card-title">Counter Strike 2</h5>
                   <p class="card-text">
                     Shooter
                   </p>
@@ -162,7 +172,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Days Gone">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/daysgone.jpg" class="card-img-top rounded-0" alt="Elden Ring" />
                 <div class="card-body">
                   <h5 class="card-title">Days Gone</h5>
@@ -175,7 +185,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="UFC 4">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/ufc4.png" class="card-img-top rounded-0" alt="UFC" />
                 <div class="card-body">
                   <h5 class="card-title">UFC 4</h5>
@@ -188,7 +198,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Need For Speed">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/needforspeed.png" class="card-img-top rounded-0" alt="Need For Speed" />
                 <div class="card-body">
                   <h5 class="card-title">Need For Speed</h5>
@@ -201,7 +211,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Warframe">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/warframe.png" class="card-img-top rounded-0" alt="Warframe" />
                 <div class="card-body">
                   <h5 class="card-title">Warframe</h5>
@@ -214,7 +224,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Fifa 23">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/fifa23.jpg" class="card-img-top rounded-0" alt="fifa23" />
                 <div class="card-body">
                   <h5 class="card-title">Fifa 23</h5>
@@ -227,7 +237,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="APEX">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/apex.jpg" class="card-img-top rounded-0" alt="Apex Legends" />
                 <div class="card-body">
                   <h5 class="card-title">APEX</h5>
@@ -240,7 +250,7 @@
               </article>
             </aside>
             <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Metrodo Exodus">
-              <article class="card w-100 rounded-0 cards-disenio">
+              <article class="card w-100 h-100 rounded-0 cards-disenio">
                 <img src="./img/Juegos/metroexodus.jpg" class="card-img-top rounded-0" alt="Metro Exodus" />
                 <div class="card-body">
                   <h5 class="card-title">Metro Exodus</h5>
@@ -268,8 +278,8 @@
                       la franquicia cuando salió hace 19 años. CS:GO trae nuevos mapas, personajes, armas y modos de
                       juego, y ofrece versiones actualizadas del contenido clásico de CS
                     </p>
-                    <a href="./pages/cs2.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/cs2.html" class="btn text-center">Comprar</a>
+                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
+                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -290,8 +300,8 @@
                       motociclista errante y cazarrecompensas que viaja por el camino averiado y lucha por sobrevivir a la
                       vez que busca una razón para vivir en este juego de acción y aventura en un mundo abierto.
                     </p>
-                    <a href="./pages/daysgone.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/daysgone.html" class="btn text-center">Comprar</a>
+                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
+                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -312,8 +322,8 @@
                       lugar a una experiencia fluida en función del posicionamiento y del contexto físico. Gracias a esta
                       tecnología, el cierre se integra como parte del sistema de golpeo.
                     </p>
-                    <a href="./pages/ufc.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/ufc.html" class="btn text-center">Comprar</a>
+                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
+                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -334,8 +344,8 @@
                       semanales para el Grand: la carrera callejera definitiva. Llena tu garage con autos personalizados
                       con detalles precisos y deslumbra las calles con tu estilo.
                     </p>
-                    <a href="./pages/needforspeed.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/needforspeed.html" class="btn text-center">Comprar</a>
+                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
+                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -355,8 +365,8 @@
                       Awaken as an unstoppable warrior and battle alongside your friends in this story-driven free-to-play
                       online action game
                     </p>
-                    <a href="./pages/warframe.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/warframe.html" class="btn text-center">Comprar</a>
+                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
+                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -377,8 +387,8 @@
                       Cup™ masculina y femenina, que estarán disponibles durante la temporada, equipos de clubes
                       femeniles, el Cross-Play* y mucho más.
                     </p>
-                    <a href="./pages/fifa23.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/fifa23.html" class="btn text-center">Comprar</a>
+                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
+                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -465,5 +475,6 @@
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="./js/frase.js"></script>
+    <script src="./js/tema.js"></script>
 </body>
 </html>
