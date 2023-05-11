@@ -69,17 +69,17 @@
       <section class="container-fluid my-3">
         <h2 class="text-center">Administrador de juegos</h2>
         <hr />
-        <p>
-          Agregar juego:
+        <div class="text-end container">
           <button
             id=""
-            class="btn btn-outline-success"
+            class="btn btn-red rounded-0 text-light"
             data-bs-toggle="modal"
             data-bs-target="#modal-admin-juegos"
           >
+            agregar juego
             <i class="bi bi-controller"></i>
           </button>
-        </p>
+        </div>
         <h3>lista de juegos</h3>
         <hr />
         <article class="table-responsive">
@@ -112,9 +112,9 @@
                     <i class="bi bi-pencil-fill"></i></button
                   ><button
                     type="button"
-                    class="btn btn-danger mx-1"
+                    class="btn btn-red w-auto text-light mx-1"
                   >
-                  <i class="bi bi-trash-fill"></i>
+                    <i class="bi bi-trash-fill"></i>
                   </button>
                 </td>
               </tr>
@@ -135,9 +135,9 @@
                     <i class="bi bi-pencil-fill"></i></button
                   ><button
                     type="button"
-                    class="btn btn-danger mx-1"
+                    class="btn btn-red w-auto text-light mx-1"
                   >
-                  <i class="bi bi-trash-fill"></i>
+                    <i class="bi bi-trash-fill"></i>
                   </button>
                 </td>
               </tr>
@@ -166,7 +166,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form id="formPelicula">
+                <form id="formJuegos">
                   <div class="row g-3">
                     <div class="col-12">
                       <label for="codigo" class="form-label">Código</label>
@@ -175,6 +175,8 @@
                         class="form-control"
                         aria-label="codigo"
                         id="codigo"
+                        disabled
+                        required
                       />
                     </div>
                     <div class="col-12">
@@ -188,6 +190,7 @@
                         nombre
                         maxlength="30"
                         minlength="3"
+                        required
                       />
                     </div>
                     <div class="col-12">
@@ -201,41 +204,44 @@
                         aria-label="descripcion"
                         id="descripcion"
                         maxlength="1000"
-                        minlength="3"
+                        minlength="5"
+                        required
                       ></textarea>
                     </div>
                     <div class="col-12">
-                      <div class="col-12">
-                        <label for="categoria" class="form-label"
-                          >Categoria *</label
-                        >
-                        <select
-                          class="form-select"
-                          aria-label="categoria"
-                          id="categoria"
-                        >
-                          <option selected value="">
-                            Seleccione una opción
-                          </option>
-                          <option value="sandbox">sandbox</option>
-                          <option value="simulación">simulación</option>
-                          <option value="fabricación">fabricación</option>
-                          <option value="construcción">construcción</option>
-                          <option value="aventura">aventura</option>
-                        </select>
-                      </div>
-                      <div class="col-12">
-                        <label for="precio" class="form-label">Precio *</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          aria-label="precio"
-                          placeholder="5000"
-                          id="precio"
-                          min="1"
-                          max="10000"
-                        />
-                      </div>
+                      <label for="categoria" class="form-label"
+                        >Categoria *</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="categoria"
+                        id="categoria"
+                        required
+                      >
+                        <option selected disabled value="">
+                          Seleccione una opción
+                        </option>
+                        <option value="sandbox">sandbox</option>
+                        <option value="simulación">simulación</option>
+                        <option value="fabricación">fabricación</option>
+                        <option value="construcción">construcción</option>
+                        <option value="aventura">aventura</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="precio" class="form-label">Precio *</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        aria-label="precio"
+                        placeholder="5000"
+                        id="precio"
+                        min="1"
+                        max="100000"
+                        required
+                      />
+                    </div>
+                    <div>
                       <label for="imagen" class="form-label">Imágen</label>
                       <input
                         type="text"
@@ -245,9 +251,9 @@
                         id="imagen"
                         maxlength="300"
                         minlength="3"
+                        required
                       />
                     </div>
-                    <div class="col-12"></div>
                     <div class="col-12">
                       <label for="desarrolador" class="form-label"
                         >Desarrolador</label
@@ -258,10 +264,31 @@
                         aria-label="desarrolador"
                         placeholder="Nintendo"
                         id="desarrolador"
+                        required
+                        maxlength="1000"
+                        minlength="3"
                       />
                     </div>
-
-                    <button id="" type="submit" class="btn btn-outline-success">
+                    <div class="col-12">
+                      <label for="requisitos" class="form-label"
+                        >Requisitos</label
+                      >
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        placeholder=""
+                        aria-label="requisitos"
+                        id="requisitos"
+                        maxlength="1000"
+                        minlength="5"
+                        required
+                      ></textarea>
+                    </div>
+                    <button
+                      id=""
+                      type="submit"
+                      class="btn btn-outline-dark rounded-0 btn-red w-100"
+                    >
                       Enviar
                     </button>
                   </div>
