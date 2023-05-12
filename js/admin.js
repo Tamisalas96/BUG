@@ -62,4 +62,20 @@ function mostrarAlert(estado, resumeErrores) {
 
   function limpiarForm() {
     formJuegos.reset()
-  }
+// mensaje de aprobacion
+
+Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Juego creado',
+    showConfirmButton: false,
+    timer: 1500
+  })  
+   /* Swal.fire({
+    title: 'Juego creado!',
+    imageUrl: 'https://i.pinimg.com/564x/ee/12/a9/ee12a906d097550141060360ccc54fd2.jpg',
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: 'Custom image',
+  }) */
+}

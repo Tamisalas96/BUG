@@ -42,7 +42,7 @@ function validacionCategoria(categoria){
     let resumen = '';
     //quiero preguntar si no cumple con la validacion
     if(!validarCantidadCaracteres(nombre,2,50)){
-        resumen = '- El titulo debe tener entre 2 y 100 caracteres <br>'
+        resumen = '- El Nombre debe tener entre 2 y 100 caracteres <br>'
     }
     if(!validarCantidadCaracteres(descripcion,5,500)){
         resumen += '- La Descripcion debe tener entre 5 y 500 caracteres <br>'
