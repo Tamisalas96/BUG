@@ -6,11 +6,11 @@ let formJuegos = document.getElementById('formJuegos')
 let codigo = document.getElementById("codigo"),
   nombre = document.getElementById("nombre"),
   descripcion = document.getElementById("descripcion"),
-  precio = document.getElementById("precio"),
   categoria = document.getElementById("categoria"),
+  precio = document.getElementById("precio"),
   imagen = document.getElementById("imagen"),
-  requisitos = document.getElementById("requisitos"),
-  desarrollador = document.getElementById("desarrollador") 
+  desarrollador = document.getElementById("desarrollador"), 
+  requisitos = document.getElementById("requisitos");
 let lista_de_juegos = []
 
 // eventos 
@@ -24,18 +24,42 @@ CrearJuego()
 
 function CrearJuego(){
       //validar el formulario
-  let resumeErrores = sumarioValidaciones(nombre.value,descripcion.value,categoria.value,requisitos.value,desarrollador.value);
+  let resumeErrores = sumarioValidaciones(nombre.value,
+    descripcion.value,
+    categoria.value,
+    precio.value,
+    imagen.value,
+    desarrollador.value,
+    requisitos.value)
 
   if (resumeErrores.length === 0) {
-
-    let nuevoJuego = new Videojuego(nombre.value,descripcion.value,precio.value,categoria.value,imagen.value,requisitos.value,desarrollador.value)
-console.log(nuevoJuego)
+    mostrarAlert(false, '')
+    let nuevoJuego = new Videojuego(nombre.value,
+        descripcion.value,
+        categoria.value,
+        precio.value,
+        imagen.value,
+        desarrollador.value,
+        requisitos.value)
+        console.log(nuevoJuego)
 // guardo el juego en un array
 lista_de_juegos.push(nuevoJuego)
-// guaradr en local storage
+limpiarForm()
   } else {
-    let alerta = document.getElementById("alertError")
-    alerta.className = "alert alert-danger";
-    alerta.innerHTML = resumeErrores;
+    mostrarAlert(true, resumeErrores)
   }
 }
+function mostrarAlert(estado, resumeErrores) {
+    //estado = true muestro el alert, caso contrario oculto
+    let alerta = document.getElementById("alertError");
+    if (estado) {
+      alerta.className = "alert alert-danger";
+      alerta.innerHTML = resumeErrores;
+    } else {
+      alerta.className = "alert alert-danger d-none";
+    }
+  }
+
+  function limpiarForm() {
+    formJuegos.reset()
+  }

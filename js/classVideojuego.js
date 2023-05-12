@@ -2,21 +2,21 @@ export default class Videojuego{
     #codigo;
     #nombre;
     #descripcion;
-    #precio;
     #categoria;
+    #precio;
     #imagen;
-    #requisitos;
     #desarrollador;
+    #requisitos;
 
-    constructor(nombre,descripcion,precio,categoria,imagen,requisitos,desarrollador){
+    constructor(nombre,descripcion,categoria,precio,imagen,desarrollador,requisitos){
         this.#codigo = uuidv4();
         this.#nombre = nombre;
         this.#descripcion = descripcion;
-        this.#precio = precio;
         this.#categoria = categoria;
+        this.#precio = precio;
         this.#imagen = imagen;
-        this.#requisitos = requisitos;
         this.#desarrollador = desarrollador;
+        this.#requisitos = requisitos;
     }
 // getters
     get codigo(){
@@ -73,11 +73,12 @@ export default class Videojuego{
         return{
             codigo: this.codigo,
             nombre: this.nombre,
-            precio: this.precio,
+            descripcion: this.descripcion,
             categoria: this.categoria,
+            precio: this.precio,
             imagen: this.imagen,
-            requisitos: this.requisitos,
             desarrollador: this.desarrollador,
+            requisitos: this.requisitos,
         }
     }
 }
