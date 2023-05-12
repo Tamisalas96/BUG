@@ -176,7 +176,7 @@
                         aria-label="codigo"
                         id="codigo"
                         disabled
-                        required
+                        
                       />
                     </div>
                     <div class="col-12">
@@ -187,9 +187,8 @@
                         placeholder="Ej: Super Mario Bros"
                         aria-label="nombre"
                           id="nombre"
-                        maxlength="30"
-                        minlength="3"
-                        required
+
+                        
                       />
                     </div>
                     <div class="col-12">
@@ -204,7 +203,7 @@
                         id="descripcion"
                         maxlength="1000"
                         minlength="5"
-                        required
+                        
                       ></textarea>
                     </div>
                     <div class="col-12">
@@ -215,7 +214,7 @@
                         class="form-select"
                         aria-label="categoria"
                         id="categoria"
-                        required
+                        
                       >
                         <option selected disabled value="">
                           Seleccione una opción
@@ -237,7 +236,7 @@
                         id="precio"
                         min="1"
                         max="100000"
-                        required
+                        
                       />
                     </div>
                     <div>
@@ -250,7 +249,7 @@
                         id="imagen"
                         maxlength="300"
                         minlength="3"
-                        required
+                        
                       />
                     </div>
                     <div class="col-12">
@@ -263,9 +262,7 @@
                         aria-label="desarrollador"
                         placeholder="Nintendo"
                         id="desarrollador"
-                        required
-                        maxlength="1000"
-                        minlength="3"
+                        
                       />
                     </div>
                     <div class="col-12">
@@ -278,10 +275,12 @@
                         placeholder=""
                         aria-label="requisitos"
                         id="requisitos"
-                        maxlength="1000"
-                        minlength="5"
-                        required
+                  
+                        
                       ></textarea>
+                    </div>
+                    <div class="alert alert-danger d-none" id="alertError" role="alert">
+
                     </div>
                     <button
                       id=""
