@@ -5,6 +5,7 @@ import { sumarioValidaciones } from "./helpers.js";
 let formJuegos = document.getElementById('formJuegos')
 let codigo = document.getElementById("codigo"),
   nombre = document.getElementById("nombre"),
+  descripcion = document.getElementById("descripcion"),
   precio = document.getElementById("precio"),
   categoria = document.getElementById("categoria"),
   imagen = document.getElementById("imagen"),
@@ -23,11 +24,11 @@ CrearJuego()
 
 function CrearJuego(){
       //validar el formulario
-  let resumeErrores = sumarioValidaciones(nombre.value,categoria.value,requisitos.value,desarrollador.value);
+  let resumeErrores = sumarioValidaciones(nombre.value,descripcion.value,categoria.value,requisitos.value,desarrollador.value);
 
   if (resumeErrores.length === 0) {
 
-    let nuevoJuego = new Videojuego(nombre.value,precio.value,categoria.value,imagen.value,requisitos.value,desarrollador.value)
+    let nuevoJuego = new Videojuego(nombre.value,descripcion.value,precio.value,categoria.value,imagen.value,requisitos.value,desarrollador.value)
 console.log(nuevoJuego)
 // guardo el juego en un array
 lista_de_juegos.push(nuevoJuego)

@@ -1,27 +1,32 @@
 export default class Videojuego{
     #codigo;
     #nombre;
+    #descripcion;
     #precio;
     #categoria;
     #imagen;
     #requisitos;
     #desarrollador;
 
-    constructor(nombre,precio,categoria,imagen,requisitos,desarrollador){
+    constructor(nombre,descripcion,precio,categoria,imagen,requisitos,desarrollador){
         this.#codigo = uuidv4();
         this.#nombre = nombre;
+        this.#descripcion = descripcion;
         this.#precio = precio;
         this.#categoria = categoria;
         this.#imagen = imagen;
         this.#requisitos = requisitos;
         this.#desarrollador = desarrollador;
     }
-
+// getters
     get codigo(){
         return this.#codigo;
     }
     get nombre(){
         return this.#nombre;
+    }
+    get descripcion(){
+        return this.#descripcion;
     }
     get precio(){
         return this.#precio;
@@ -38,12 +43,15 @@ export default class Videojuego{
     get desarrollador(){
         return this.#desarrollador;
     }
-
+//setters
     set codigo(codigo){
         this.#codigo = codigo;
     }
     set nombre(nombre){
         this.#nombre = nombre;
+    }
+    set precio(descripcion){
+        this.#descripcion = descripcion;
     }
     set precio(precio){
         this.#precio = precio;
