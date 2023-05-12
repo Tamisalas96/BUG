@@ -6,17 +6,15 @@ export default class Videojuego{
     #imagen;
     #requisitos;
     #desarrollador;
-    #resenias;
 
-    constructor(codigo = uuidv4(),nombre,precio,categoria,imagen,requisitos,desarrollador,reseñas){
-        this.#codigo = codigo;
+    constructor(nombre,precio,categoria,imagen,requisitos,desarrollador){
+        this.#codigo = uuidv4();
         this.#nombre = nombre;
         this.#precio = precio;
         this.#categoria = categoria;
         this.#imagen = imagen;
         this.#requisitos = requisitos;
         this.#desarrollador = desarrollador;
-        this.#resenias = resenias;
     }
 
     get codigo(){
@@ -40,9 +38,6 @@ export default class Videojuego{
     get desarrollador(){
         return this.#desarrollador;
     }
-    get resenias(){
-        return this.#resenias;
-    }
 
     set codigo(codigo){
         this.#codigo = codigo;
@@ -65,9 +60,6 @@ export default class Videojuego{
     set desarrollador(desarrollador){
         this.#desarrollador = desarrollador;
     }
-    set resenias(resenias){
-        this.#resenias = resenias;
-    }
 
     toJSON(){
         return{
@@ -78,7 +70,6 @@ export default class Videojuego{
             imagen: this.imagen,
             requisitos: this.requisitos,
             desarrollador: this.desarrollador,
-            resenias: this.resenias
         }
     }
 }
