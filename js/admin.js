@@ -36,7 +36,43 @@ if (!lista_de_juegos) {
 // eventos 
 formJuegos.addEventListener('submit',prepararForm)
 
+
+cargaInicial()
 // funciones 
+function cargaInicial() {
+  if (lista_de_juegos.length > 0) {
+    //dibujar las filas de la tabla
+    lista_de_juegos.map((videojuego, indice) => crearFila(videojuego, indice + 1));
+  }
+  //le muestro el msj que no tengo elementos
+}
+function crearFila(videojuego, indice) {
+  let tablaJuego = document.querySelector("tbody");
+  tablaJuego.innerHTML += `<tr>
+  <th scope="row">${indice}</th>
+  <td>${videojuego.nombre}</td>
+  <td class="text-truncate ancho pe-5">
+    ${videojuego.descripcion}
+  </td>
+  <td class="text-truncate ancho pe-5">
+    ${videojuego.precio}
+  </td>
+  <td>${videojuego.categoria}</td>
+  <td>
+  <button type="button" 
+  class="btn btn-success mx-1" 
+  onclick="prepararJuego('${videojuego.codigo}')">
+  <i class="bi bi-pencil-fill"></i></button
+><button
+  type="button"
+  class="btn btn-red w-auto text-light mx-1"
+  onclick="borrarJuego('${videojuego.codigo}')">
+  <i class="bi bi-trash-fill"></i>
+</button>
+</td>
+</tr>`;
+}
+
 function prepararForm(e){
 e.preventDefault() 
 crearVideojuego() 
