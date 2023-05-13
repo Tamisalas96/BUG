@@ -11,18 +11,38 @@ let codigo = document.getElementById("codigo"),
   imagen = document.getElementById("imagen"),
   desarrollador = document.getElementById("desarrollador"), 
   requisitos = document.getElementById("requisitos");
-let lista_de_juegos = []
 
+// let lista_de_juegos = JSON.parse(localStorage.getItem('lista_de_juegos')) || []
+
+//si quiero trabajar con un array de objetos de tipo Videojuego
+let lista_de_juegos = localStorage.getItem("lista_de_juegos");
+// si lista_de_juegos esta vacio
+if (!lista_de_juegos) {
+  lista_de_juegos = [];
+} else {
+  lista_de_juegos = JSON.parse(lista_de_juegos).map(
+    (videojuego) =>
+      new Videojuego(
+        videojuego.nombre,
+        videojuego.descripcion,
+        videojuego.categoria,
+        videojuego.precio,
+        videojuego.imagen,
+        videojuego.desarrollador,
+        videojuego.requisitos
+      )
+  );
+}
 // eventos 
 formJuegos.addEventListener('submit',prepararForm)
 
 // funciones 
 function prepararForm(e){
 e.preventDefault() 
-CrearJuego() 
+crearVideojuego() 
 }
 
-function CrearJuego(){
+function crearVideojuego(){
       //validar el formulario
   let resumeErrores = sumarioValidaciones(nombre.value,
     descripcion.value,
@@ -44,6 +64,8 @@ function CrearJuego(){
         console.log(nuevoJuego)
 // guardo el juego en un array
 lista_de_juegos.push(nuevoJuego)
+//guardar en local
+localStorage.setItem('lista_de_juegos', JSON.stringify(lista_de_juegos))
 limpiarForm()
   } else {
     mostrarAlert(true, resumeErrores)
