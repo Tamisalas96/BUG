@@ -6,8 +6,11 @@ function crearVideojuego(){
     if (resumenErrores.length === 0){
         let nuevoJuego = new Videojuego(nombre.value,descripcion.value,categoria.value,precio.value,imagen.value,desarrollador.value,requisitos.value)
         console.log(nuevoJuego);
+        listaVideojuegos.push(nuevoJuego);
+        guardarLocal();
+        limpiarFormulario();
     }else{
-        alert("todo mal")
+        mostrarAlert(true,resumenErrores);
     }
 
     function guardarLocal() {
