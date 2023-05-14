@@ -42,6 +42,7 @@ function cargaInicial() {
 //mostrar mensaje de tabla vacia
   }
 }
+
 function crearFila(videojuego, indice) {
   let tablaJuego = document.querySelector("tbody");
   tablaJuego.innerHTML += `<tr>
@@ -69,40 +70,28 @@ function crearFila(videojuego, indice) {
 </td>
 </tr>`;
 }
+
 function prepararForm(e){
 e.preventDefault() 
 crearVideojuego() 
 }
+
 function crearVideojuego(){
-      //validar el formulario
-  let resumeErrores = sumarioValidaciones(nombre.value,
-    descripcion.value,
-    categoria.value,
-    precio.value,
-    imagen.value,
-    desarrollador.value,
-    requisitos.value)
-  if (resumeErrores.length === 0) {
-    mostrarAlert(false, '')
-    let nuevoJuego = new Videojuego(
-        undefined,
-        nombre.value,
-        descripcion.value,
-        categoria.value,
-        precio.value,
-        imagen.value,
-        desarrollador.value,
-        requisitos.value)
-        console.log(nuevoJuego)
-// guardo el juego en un array
-lista_de_juegos.push(nuevoJuego)
-//guardar en local
-localStorage.setItem('lista_de_juegos', JSON.stringify(lista_de_juegos))
-limpiarForm()
-  } else {
-    mostrarAlert(true, resumeErrores)
-  }
+    let resumenErrores = sumarioValidaciones(nombre.value,descripcion.value,categoria.value,precio.value,imagen.value,desarrollador.value,requisitos.value)
+
+    if (resumenErrores.length === 0){
+        let nuevoJuego = new Videojuego(undefined,nombre.value,descripcion.value,categoria.value,precio.value,imagen.value,desarrollador.value,requisitos.value)
+        lista_de_juegos.push(nuevoJuego);
+        guardarLocal();
+        limpiarForm();
+    }else{
+        mostrarAlert(true,resumenErrores);
+    }
+
+function guardarLocal() {
+        localStorage.setItem("listaVideojuegos", JSON.stringify(listaVideojuegos));
 }
+
 function mostrarAlert(estado, resumeErrores) {
     //estado = true muestro el alert, caso contrario oculto
     let alerta = document.getElementById("alertError");
@@ -123,5 +112,5 @@ Swal.fire({
     title: 'Juego creado',
     showConfirmButton: false,
     timer: 1500
-  })  
+  })
 }
