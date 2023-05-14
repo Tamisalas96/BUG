@@ -50,14 +50,15 @@ function crearFila(videojuego, indice) {
   let tablaJuego = document.querySelector("tbody");
   tablaJuego.innerHTML += `<tr>
   <th scope="row">${indice}</th>
-  <td>${videojuego.nombre}</td>
-  <td class="text-truncate ancho pe-5">
+  <td class="text-truncate">${videojuego.nombre}</td>
+  <td class="text-truncate ancho pe-3">
     ${videojuego.descripcion}
   </td>
-  <td class="text-truncate ancho pe-5">
-    $ ${videojuego.precio}
+  <td>
+    $${videojuego.precio}
   </td> 
   <td>${videojuego.categoria}</td>
+  <td>${videojuego.desarrollador}</td>
   <td> 
   <button type="button" 
   class="btn btn-success mx-1" 
