@@ -172,3 +172,17 @@ a{
     object-fit: cover;
   }
 }
+
+.logo{
+  
+  height: 60px;
+}
+.iconofooter{
+  color: aliceblue;
+}
+
+.footer-centrado{
+  position: relative;
+  top:20%;
+}
+

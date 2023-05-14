@@ -24,9 +24,9 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg color">
-        <div class="container-fluid color">
-          <a class="navbar-brand letra tamaño" href="../index.html">BUG</a>
+      <nav class="navbar navbar-expand-lg colorNav">
+        <div class="container-fluid">
+         <img src="../img/Bug (1).png" alt="logo bug" width="150px">
           <button
             class="navbar-toggler"
             type="button"
@@ -50,6 +50,15 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="./login.html">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </span>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" id="btnThemeDark" ><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
+                  <li><button class="dropdown-item" id="btnThemeLight"><i class="bi bi-brightness-high-fill"></i> Light</button></li>
+                </ul>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -282,8 +291,16 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <footer class="bg-dark text-secondary py-4">
-      <p class="text-light text-center">&#169 Todos los derechos reservados</p>
-    </footer>
+    <footer class="text-secondary py-4 colorNav container-fluid" >
+      <section class="row d-flex">
+        <aside class="col-lg-4"> <img src="../img/Bug (1).png" alt="logo bug" class="logo" width="150px"> </aside>
+        <aside class="col-lg-4"> <h5 class="text-light text-center footer-centrado">&#169 Todos los derechos reservados</h5></aside>
+        <aside class="col-lg-4">
+          <a class="text-light text-center footer-centrado" href="./pages/error404.html"><h5>Acerca de nosotros</h5></a>
+        </aside>
+      </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="../js/tema.js"></script>
   </body>
 </html>
