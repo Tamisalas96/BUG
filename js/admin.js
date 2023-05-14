@@ -1,7 +1,6 @@
 import Videojuego from "./classVideojuego.js";
 import { sumarioValidaciones } from "./helpers.js";
-
-// variables globales 
+// variables 
 let formJuegos = document.getElementById('formJuegos')
 let codigo = document.getElementById("codigo"),
   nombre = document.getElementById("nombre"),
@@ -11,18 +10,15 @@ let codigo = document.getElementById("codigo"),
   imagen = document.getElementById("imagen"),
   desarrollador = document.getElementById("desarrollador"), 
   requisitos = document.getElementById("requisitos");
-
-// let lista_de_juegos = JSON.parse(localStorage.getItem('lista_de_juegos')) || []
-
-//si quiero trabajar con un array de objetos de tipo Videojuego
+//array de objetos de tipo Videojuego
 let lista_de_juegos = localStorage.getItem("lista_de_juegos");
-// si lista_de_juegos esta vacio
 if (!lista_de_juegos) {
   lista_de_juegos = [];
 } else {
   lista_de_juegos = JSON.parse(lista_de_juegos).map(
     (videojuego) =>
       new Videojuego(
+        videojuego.codigo,
         videojuego.nombre,
         videojuego.descripcion,
         videojuego.categoria,
@@ -35,16 +31,16 @@ if (!lista_de_juegos) {
 }
 // eventos 
 formJuegos.addEventListener('submit',prepararForm)
-
-
+//
 cargaInicial()
 // funciones 
 function cargaInicial() {
   if (lista_de_juegos.length > 0) {
     //dibujar las filas de la tabla
     lista_de_juegos.map((videojuego, indice) => crearFila(videojuego, indice + 1));
+  } else {
+//mostrar mensaje de tabla vacia
   }
-  //le muestro el msj que no tengo elementos
 }
 function crearFila(videojuego, indice) {
   let tablaJuego = document.querySelector("tbody");
@@ -73,12 +69,10 @@ function crearFila(videojuego, indice) {
 </td>
 </tr>`;
 }
-
 function prepararForm(e){
 e.preventDefault() 
 crearVideojuego() 
 }
-
 function crearVideojuego(){
       //validar el formulario
   let resumeErrores = sumarioValidaciones(nombre.value,
@@ -88,10 +82,11 @@ function crearVideojuego(){
     imagen.value,
     desarrollador.value,
     requisitos.value)
-
   if (resumeErrores.length === 0) {
     mostrarAlert(false, '')
-    let nuevoJuego = new Videojuego(nombre.value,
+    let nuevoJuego = new Videojuego(
+        undefined,
+        nombre.value,
         descripcion.value,
         categoria.value,
         precio.value,
@@ -122,7 +117,6 @@ function mostrarAlert(estado, resumeErrores) {
   function limpiarForm() {
     formJuegos.reset()
 // mensaje de aprobacion
-
 Swal.fire({
     position: 'top-end',
     icon: 'success',
@@ -130,11 +124,4 @@ Swal.fire({
     showConfirmButton: false,
     timer: 1500
   })  
-   /* Swal.fire({
-    title: 'Juego creado!',
-    imageUrl: 'https://i.pinimg.com/564x/ee/12/a9/ee12a906d097550141060360ccc54fd2.jpg',
-    imageWidth: 400,
-    imageHeight: 200,
-    imageAlt: 'Custom image',
-  }) */
 }

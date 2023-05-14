@@ -8,8 +8,8 @@ export default class Videojuego{
     #desarrollador;
     #requisitos;
 
-    constructor(nombre,descripcion,categoria,precio,imagen,desarrollador,requisitos){
-        this.#codigo = uuidv4();
+    constructor(codigo = uuidv4(), nombre,descripcion,categoria,precio,imagen,desarrollador,requisitos){
+        this.#codigo = codigo;
         this.#nombre = nombre;
         this.#descripcion = descripcion;
         this.#categoria = categoria;

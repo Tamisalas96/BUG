@@ -1,9 +1,7 @@
 function validarCantidadCaracteres(texto, min, max){
     if(texto.length >= min && texto.length <= max){
-        console.log('aqui el texto tiene la cant. de caracteres correcto');
         return true;
     }else{
-        console.log('aqui el texto no cumple la validacion');
         return false;
     }
 }
@@ -11,10 +9,8 @@ function validarURLImagenes(texto){
     const patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|png|gif)$/
     console.log(typeof patron);
      if(patron.test(texto)){
-         console.log('la expresion regular fue valida');
          return true;
      }else{
-         console.log('no cumplio con la expresion regular');
          return false;
      }
  }
@@ -40,7 +36,7 @@ function validacionCategoria(categoria){
 
  export function sumarioValidaciones(nombre,descripcion,categoria,precio,imagen,desarrollador, requisitos){
     let resumen = '';
-    //quiero preguntar si no cumple con la validacion
+    // si no cumple con la validacion
     if(!validarCantidadCaracteres(nombre,2,50)){
         resumen = '- El Nombre debe tener entre 2 y 100 caracteres <br>'
     }
