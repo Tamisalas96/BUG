@@ -55,10 +55,10 @@ function crearFila(videojuego, indice) {
     ${videojuego.descripcion}
   </td>
   <td class="text-truncate ancho pe-5">
-    ${videojuego.precio}
-  </td>
+    $ ${videojuego.precio}
+  </td> 
   <td>${videojuego.categoria}</td>
-  <td>
+  <td> 
   <button type="button" 
   class="btn btn-success mx-1" 
   onclick="prepararJuego('${videojuego.codigo}')">

@@ -59,8 +59,8 @@ function validacionCategoria(categoria){
     if(!validarCantidadCaracteres(desarrollador,3,50)){
         resumen += '- El Desarrolador debe tener entre 3 y 50 caracteres <br>'
     }
-    if(!validarCantidadCaracteres(requisitos,5,200)){
-        resumen += '- Los requisitos debe tener entre 5 y 200 caracteres <br>'
+    if(!validarCantidadCaracteres(requisitos,5,500)){
+        resumen += '- Los requisitos debe tener entre 5 y 500 caracteres <br>'
     }
     return resumen;
 }
