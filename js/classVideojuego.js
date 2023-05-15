@@ -1,29 +1,32 @@
 export default class Videojuego{
     #codigo;
     #nombre;
-    #precio;
+    #descripcion;
     #categoria;
+    #precio;
     #imagen;
-    #requisitos;
     #desarrollador;
-    #reseñas;
+    #requisitos;
 
-    constructor(codigo = uuidv4(),nombre,precio,categoria,imagen,requisitos,desarrollador,reseñas){
+    constructor(codigo = uuidv4(), nombre,descripcion,categoria,precio,imagen,desarrollador,requisitos){
         this.#codigo = codigo;
         this.#nombre = nombre;
-        this.#precio = precio;
+        this.#descripcion = descripcion;
         this.#categoria = categoria;
+        this.#precio = precio;
         this.#imagen = imagen;
-        this.#requisitos = requisitos;
         this.#desarrollador = desarrollador;
-        this.#resenias = resenias;
+        this.#requisitos = requisitos;
     }
-
+// getters
     get codigo(){
         return this.#codigo;
     }
     get nombre(){
         return this.#nombre;
+    }
+    get descripcion(){
+        return this.#descripcion;
     }
     get precio(){
         return this.#precio;
@@ -40,15 +43,15 @@ export default class Videojuego{
     get desarrollador(){
         return this.#desarrollador;
     }
-    get resenias(){
-        return this.#resenias;
-    }
-
+//setters
     set codigo(codigo){
         this.#codigo = codigo;
     }
     set nombre(nombre){
-        this.#codigo = codigo;
+        this.#nombre = nombre;
+    }
+    set descripcion(descripcion){
+        this.#descripcion = descripcion;
     }
     set precio(precio){
         this.#precio = precio;
@@ -65,20 +68,17 @@ export default class Videojuego{
     set desarrollador(desarrollador){
         this.#desarrollador = desarrollador;
     }
-    set resenias(resenias){
-        this.#resenias = resenias;
-    }
 
     toJSON(){
         return{
             codigo: this.codigo,
             nombre: this.nombre,
-            precio: this.precio,
+            descripcion: this.descripcion,
             categoria: this.categoria,
+            precio: this.precio,
             imagen: this.imagen,
-            requisitos: this.requisitos,
             desarrollador: this.desarrollador,
-            resenias: this.resenias
+            requisitos: this.requisitos,
         }
     }
 }
