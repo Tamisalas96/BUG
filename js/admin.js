@@ -185,7 +185,7 @@ function editarVideojuego() {
       tablaJuego.children[posicionVideojuego].children[2].innerHTML =
         descripcion.value;
       tablaJuego.children[posicionVideojuego].children[3].innerHTML =
-        precio.value;
+       "$" + precio.value;
       tablaJuego.children[posicionVideojuego].children[4].innerHTML =
         categoria.value;
       tablaJuego.children[posicionVideojuego].children[5].innerHTML =
