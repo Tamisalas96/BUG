@@ -1,14 +1,14 @@
 import Videojuego from "./classVideojuego.js";
 import { sumarioValidaciones } from "./helpers.js";
-// variables 
-let formJuegos = document.getElementById('formJuegos')
+// variables
+let formJuegos = document.getElementById("formJuegos");
 let codigo = document.getElementById("codigo"),
   nombre = document.getElementById("nombre"),
   descripcion = document.getElementById("descripcion"),
   categoria = document.getElementById("categoria"),
   precio = document.getElementById("precio"),
   imagen = document.getElementById("imagen"),
-  desarrollador = document.getElementById("desarrollador"), 
+  desarrollador = document.getElementById("desarrollador"),
   requisitos = document.getElementById("requisitos");
 //array de objetos de tipo Videojuego
 let lista_de_juegos = localStorage.getItem("lista_de_juegos");
@@ -29,20 +29,24 @@ if (!lista_de_juegos) {
       )
   );
 }
-// eventos 
-formJuegos.addEventListener('submit',prepararForm)
+// eventos
+formJuegos.addEventListener("submit", prepararForm);
 //
-cargaInicial()
-// funciones 
+cargaInicial();
+// funciones
+function guardarLocal() {
+  localStorage.setItem("lista_de_juegos", JSON.stringify(lista_de_juegos));
+}
 function cargaInicial() {
   if (lista_de_juegos.length > 0) {
     //dibujar las filas de la tabla
-    lista_de_juegos.map((videojuego, indice) => crearFila(videojuego, indice + 1));
+    lista_de_juegos.map((videojuego, indice) =>
+      crearFila(videojuego, indice + 1)
+    );
   } else {
-//mostrar mensaje de tabla vacia
+    //mostrar mensaje de tabla vacia
   }
 }
-
 function crearFila(videojuego, indice) {
   let tablaJuego = document.querySelector("tbody");
   tablaJuego.innerHTML += `<tr>
@@ -70,47 +74,60 @@ function crearFila(videojuego, indice) {
 </td>
 </tr>`;
 }
-
-function prepararForm(e){
-e.preventDefault() 
-crearVideojuego() 
+function limpiarForm() {
+  formJuegos.reset();
 }
-
-function crearVideojuego(){
-    let resumenErrores = sumarioValidaciones(nombre.value,descripcion.value,categoria.value,precio.value,imagen.value,desarrollador.value,requisitos.value)
-
-    if (resumenErrores.length === 0){
-        let nuevoJuego = new Videojuego(undefined,nombre.value,descripcion.value,categoria.value,precio.value,imagen.value,desarrollador.value,requisitos.value)
-        lista_de_juegos.push(nuevoJuego);
-        guardarLocal();
-        limpiarForm();
-    }else{
-        mostrarAlert(true,resumenErrores);
-    }
-
-function guardarLocal() {
-        localStorage.setItem("listaVideojuegos", JSON.stringify(listaVideojuegos));
-}
-
 function mostrarAlert(estado, resumeErrores) {
-    //estado = true muestro el alert, caso contrario oculto
-    let alerta = document.getElementById("alertError");
-    if (estado) {
-      alerta.className = "alert alert-danger";
-      alerta.innerHTML = resumeErrores;
-    } else {
-      alerta.className = "alert alert-danger d-none";
-    }
+  //estado = true muestro el alert, caso contrario oculto
+  let alerta = document.getElementById("alertError");
+  if (estado) {
+    alerta.className = "alert alert-danger";
+    alerta.innerHTML = resumeErrores;
+  } else {
+    alerta.className = "alert alert-danger d-none";
   }
-
-  function limpiarForm() {
-    formJuegos.reset()
-// mensaje de aprobacion
-Swal.fire({
-    position: 'top-end',
-    icon: 'success',
-    title: 'Juego creado',
-    showConfirmButton: false,
-    timer: 1500
-  })
 }
+function crearVideojuego() {
+  // validaciones en el form
+  let resumenErrores = sumarioValidaciones(
+    nombre.value,
+    descripcion.value,
+    categoria.value,
+    precio.value,
+    imagen.value,
+    desarrollador.value,
+    requisitos.value
+  );
+  // si no hay errores creo el juego, guardo en array, subo al local limpio el form y creo la nueva fila
+  if (resumenErrores.length === 0) {
+    let nuevoJuego = new Videojuego(
+      undefined,
+      nombre.value,
+      descripcion.value,
+      categoria.value,
+      precio.value,
+      imagen.value,
+      desarrollador.value,
+      requisitos.value
+    );
+    lista_de_juegos.push(nuevoJuego);
+    guardarLocal();
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Juego creado",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    mostrarAlert(false,resumenErrores)
+    limpiarForm();
+    crearFila(nuevoJuego, lista_de_juegos.length);
+  } else { // si hay errores, muestro el alert debajo del formulario
+    mostrarAlert(true, resumenErrores);
+  }
+}
+function prepararForm(e) {
+  e.preventDefault();
+  crearVideojuego();
+}
+
