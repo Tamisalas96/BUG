@@ -10,6 +10,7 @@ let codigo = document.getElementById("codigo"),
   imagen = document.getElementById("imagen"),
   desarrollador = document.getElementById("desarrollador"),
   requisitos = document.getElementById("requisitos");
+  let modalVideojuego = new bootstrap.Modal(document.getElementById("modal-admin-juegos"))
 //array de objetos de tipo Videojuego
 let lista_de_juegos = localStorage.getItem("lista_de_juegos");
 if (!lista_de_juegos) {
@@ -131,3 +132,15 @@ function prepararForm(e) {
   crearVideojuego();
 }
 
+window.prepararJuego = (codigoBuscado)=>{
+modalVideojuego.show()
+let juegoBuscado = lista_de_juegos.find((videojuego)=> videojuego.codigo === codigoBuscado );
+codigo.value = juegoBuscado.codigo;
+nombre.value = juegoBuscado.nombre;
+descripcion.value = juegoBuscado.descripcion;
+categoria.value = juegoBuscado.categoria;
+precio.value = juegoBuscado.precio;
+imagen.value = juegoBuscado.imagen;
+desarrollador.value = juegoBuscado.desarrollador;
+requisitos.value = juegoBuscado.requisitos;
+}
