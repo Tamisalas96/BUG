@@ -158,23 +158,49 @@ window.prepararJuego = (codigoBuscado) => {
 };
 
 function editarVideojuego() {
-  let posicionVideojuego = lista_de_juegos.findIndex(
-    (videojuego) => videojuego.codigo === codigo.value
-  );
-  lista_de_juegos[posicionVideojuego].nombre = nombre.value;
-  lista_de_juegos[posicionVideojuego].descripcion = descripcion.value;
-  lista_de_juegos[posicionVideojuego].categoria = categoria.value;
-  lista_de_juegos[posicionVideojuego].precio = precio.value;
-  lista_de_juegos[posicionVideojuego].imagen = imagen.value;
-  lista_de_juegos[posicionVideojuego].desarrollador = desarrollador.value;
-  lista_de_juegos[posicionVideojuego].requisitos = requisitos.value;
-  //actualiza el local storage
-  guardarLocal();
-  //actualiza la tabla
-  let tablaJuego = document.querySelector("tbody");
-  tablaJuego.children[posicionVideojuego].children[1].innerHTML = nombre.value;
-  tablaJuego.children[posicionVideojuego].children[2].innerHTML = descripcion.value;
-  tablaJuego.children[posicionVideojuego].children[3].innerHTML = precio.value;
-  tablaJuego.children[posicionVideojuego].children[4].innerHTML = categoria.value;
-  tablaJuego.children[posicionVideojuego].children[5].innerHTML = desarrollador.value;
+  Swal.fire({
+    title: "¿Guardar cambios?",
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: "Guardar",
+    denyButtonText: `No guardar`,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let posicionVideojuego = lista_de_juegos.findIndex(
+        (videojuego) => videojuego.codigo === codigo.value
+      );
+      lista_de_juegos[posicionVideojuego].nombre = nombre.value;
+      lista_de_juegos[posicionVideojuego].descripcion = descripcion.value;
+      lista_de_juegos[posicionVideojuego].categoria = categoria.value;
+      lista_de_juegos[posicionVideojuego].precio = precio.value;
+      lista_de_juegos[posicionVideojuego].imagen = imagen.value;
+      lista_de_juegos[posicionVideojuego].desarrollador = desarrollador.value;
+      lista_de_juegos[posicionVideojuego].requisitos = requisitos.value;
+      //actualiza el local storage
+      guardarLocal();
+      //actualiza la tabla
+      let tablaJuego = document.querySelector("tbody");
+      tablaJuego.children[posicionVideojuego].children[1].innerHTML =
+        nombre.value;
+      tablaJuego.children[posicionVideojuego].children[2].innerHTML =
+        descripcion.value;
+      tablaJuego.children[posicionVideojuego].children[3].innerHTML =
+        precio.value;
+      tablaJuego.children[posicionVideojuego].children[4].innerHTML =
+        categoria.value;
+      tablaJuego.children[posicionVideojuego].children[5].innerHTML =
+        desarrollador.value;
+      Swal.fire("Juego modificado!", "", "success");
+      //limpiar Formulario
+      limpiarForm();
+      // cerrar la ventana modal
+      modalVideojuego.hide();
+    } else if (result.isDenied) {
+      Swal.fire("Cambios no se guardaron", "", "info");
+      //limpiar formularios
+      limpiarForm();
+      // cerrar la ventana modal
+      modalVideojuego.hide();
+    }
+  });
 }
