@@ -50,7 +50,7 @@ export default class Videojuego{
     set nombre(nombre){
         this.#nombre = nombre;
     }
-    set precio(descripcion){
+    set descripcion(descripcion){
         this.#descripcion = descripcion;
     }
     set precio(precio){
