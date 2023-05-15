@@ -221,6 +221,8 @@ window.borrarVideojuego = (codigo) => {
         );
         lista_de_juegos.splice(indiceVideojuego, 1);
         guardarLocal();
+        borrarFila(indiceVideojuego);
+        Swal.fire("Pelicula eliminada", "La pelicula seleccionada fue eliminada correctamente", "success");
       }      
     });
 };
