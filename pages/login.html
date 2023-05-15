@@ -102,11 +102,12 @@
       <section class="container d-flex justify-content-center">
         <form
           class="row mt-4 g-2 align-content-center flex-column card-login mt-5 col-xl-6 col-12 needs-validation"
-novalidate        >
+          novalidate
+        >
           <div class="col-sm-8 col-lg-4 col-xl-8 mt-5">
             <h2>Iniciar sesion</h2>
             <hr />
-            <label for="email" class="form-label text-dark ps-2"
+            <label for="email" class="form-label text-danger ps-2"
               >Escriba su email y contraseña</label
             >
             <input
@@ -118,8 +119,8 @@ novalidate        >
               maxlength="64"
               required
             />
-            <div class="valid-feedback">ta bien</div>
-            <div class="invalid-feedback">ta mal</div>
+            <div class="valid-feedback"><i class="bi bi-person-check-fill"></i></i></div>
+            <div class="invalid-feedback">ingrese su nombre de usuario</div>
           </div>
           <div class="col-sm-8 col-lg-4 col-xl-8 mt-3">
             <label for="inputPassword" class="visually-hidden"
@@ -134,8 +135,8 @@ novalidate        >
               maxlength="64"
               required
             />
-            <div class="valid-feedback">esta bien</div>
-            <div class="invalid-feedback">esta mal</div>
+            <div class="valid-feedback"><i class="bi bi-check2-circle"></i></i></div>
+            <div class="invalid-feedback">la contraseña debe tener mas de 5 caracteres</div>
           </div>
           <div class="col-sm-8 col-lg-4 col-xl-8 mt-4">
             <button
