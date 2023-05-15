@@ -72,7 +72,7 @@ function crearFila(videojuego, indice) {
 ><button
   type="button"
   class="btn btn-red w-auto text-light mx-1"
-  onclick="borrarJuego('${videojuego.codigo}')">
+  onclick="borrarVideojuego('${videojuego.codigo}')">
   <i class="bi bi-trash-fill"></i>
 </button>
 </td>
@@ -204,3 +204,7 @@ function editarVideojuego() {
     }
   });
 }
+
+window.borrarVideojuego = (codigo) => {
+
+  };
