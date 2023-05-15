@@ -78,6 +78,12 @@ function crearFila(videojuego, indice) {
 </td>
 </tr>`;
 }
+
+function borrarFila(indice){
+    let tablaVideojuegos = document.querySelector("tbody");
+    tablaVideojuegos.removeChild(tablaVideojuegos.children[indice]);
+}
+
 function limpiarForm() {
   formJuegos.reset();
 }
@@ -222,7 +228,7 @@ window.borrarVideojuego = (codigo) => {
         lista_de_juegos.splice(indiceVideojuego, 1);
         guardarLocal();
         borrarFila(indiceVideojuego);
-        Swal.fire("Pelicula eliminada", "La pelicula seleccionada fue eliminada correctamente", "success");
+        Swal.fire("Videojuego Eliminado", "El videojuego se ha eliminado satisfactoriamente", "success");
       }      
     });
 };
