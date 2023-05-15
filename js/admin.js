@@ -206,5 +206,21 @@ function editarVideojuego() {
 }
 
 window.borrarVideojuego = (codigo) => {
-
-  };
+    Swal.fire({
+      title: "Eliminar el videojuego de la lista?",
+      text: "El videojuego se borrará de forma permanente.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#b9090b",
+      confirmButtonText: "Borrar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+        let indiceVideojuego = lista_de_juegos.findIndex(
+          (videojuego) => videojuego.codigo === codigo
+        );
+        lista_de_juegos.splice(indiceVideojuego, 1);
+        guardarLocal();
+      }      
+    });
+};
