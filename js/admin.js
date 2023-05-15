@@ -10,8 +10,10 @@ let codigo = document.getElementById("codigo"),
   imagen = document.getElementById("imagen"),
   desarrollador = document.getElementById("desarrollador"),
   requisitos = document.getElementById("requisitos");
-  let modalVideojuego = new bootstrap.Modal(document.getElementById("modal-admin-juegos"))
-  let verificarCrearVideojuego = true // si esta en true, crea el videojuego sino lo edita 
+let modalVideojuego = new bootstrap.Modal(
+  document.getElementById("modal-admin-juegos")
+);
+let verificarCrearVideojuego = true; // si esta en true, crea el videojuego sino lo edita
 //array de objetos de tipo Videojuego
 let lista_de_juegos = localStorage.getItem("lista_de_juegos");
 if (!lista_de_juegos) {
@@ -121,10 +123,11 @@ function crearVideojuego() {
       showConfirmButton: false,
       timer: 1500,
     });
-    mostrarAlert(false,resumenErrores)
+    mostrarAlert(false, resumenErrores);
     limpiarForm();
     crearFila(nuevoJuego, lista_de_juegos.length);
-  } else { // si hay errores, muestro el alert debajo del formulario
+  } else {
+    // si hay errores, muestro el alert debajo del formulario
     mostrarAlert(true, resumenErrores);
   }
 }
@@ -133,34 +136,45 @@ function prepararForm(e) {
   if (verificarCrearVideojuego) {
     crearVideojuego();
   } else {
-    editarVideojuego()
+    editarVideojuego();
   }
 }
 
-window.prepararJuego = (codigoBuscado)=>{
-modalVideojuego.show()
-let juegoBuscado = lista_de_juegos.find((videojuego)=> videojuego.codigo === codigoBuscado );
-codigo.value = juegoBuscado.codigo;
-nombre.value = juegoBuscado.nombre;
-descripcion.value = juegoBuscado.descripcion;
-categoria.value = juegoBuscado.categoria;
-precio.value = juegoBuscado.precio;
-imagen.value = juegoBuscado.imagen;
-desarrollador.value = juegoBuscado.desarrollador;
-requisitos.value = juegoBuscado.requisitos;
+window.prepararJuego = (codigoBuscado) => {
+  modalVideojuego.show();
+  let juegoBuscado = lista_de_juegos.find(
+    (videojuego) => videojuego.codigo === codigoBuscado
+  );
+  codigo.value = juegoBuscado.codigo;
+  nombre.value = juegoBuscado.nombre;
+  descripcion.value = juegoBuscado.descripcion;
+  categoria.value = juegoBuscado.categoria;
+  precio.value = juegoBuscado.precio;
+  imagen.value = juegoBuscado.imagen;
+  desarrollador.value = juegoBuscado.desarrollador;
+  requisitos.value = juegoBuscado.requisitos;
 
-verificarCrearVideojuego = false
-}
+  verificarCrearVideojuego = false;
+};
 
-function editarVideojuego(){
- let posicion_del_Videojuego = lista_de_juegos.findIndex((videojuego)=>videojuego.codigo === codigo.value)
- lista_de_juegos[posicion_del_Videojuego].nombre = nombre.value
- lista_de_juegos[posicion_del_Videojuego].descripcion = descripcion.value
- lista_de_juegos[posicion_del_Videojuego].categoria = categoria.value
- lista_de_juegos[posicion_del_Videojuego].precio = precio.value
- lista_de_juegos[posicion_del_Videojuego].imagen = imagen.value
- lista_de_juegos[posicion_del_Videojuego].desarrollador = desarrollador.value
- lista_de_juegos[posicion_del_Videojuego].requisitos = requisitos.value
- guardarLocal();
-
+function editarVideojuego() {
+  let posicionVideojuego = lista_de_juegos.findIndex(
+    (videojuego) => videojuego.codigo === codigo.value
+  );
+  lista_de_juegos[posicionVideojuego].nombre = nombre.value;
+  lista_de_juegos[posicionVideojuego].descripcion = descripcion.value;
+  lista_de_juegos[posicionVideojuego].categoria = categoria.value;
+  lista_de_juegos[posicionVideojuego].precio = precio.value;
+  lista_de_juegos[posicionVideojuego].imagen = imagen.value;
+  lista_de_juegos[posicionVideojuego].desarrollador = desarrollador.value;
+  lista_de_juegos[posicionVideojuego].requisitos = requisitos.value;
+  //actualiza el local storage
+  guardarLocal();
+  //actualiza la tabla
+  let tablaJuego = document.querySelector("tbody");
+  tablaJuego.children[posicionVideojuego].children[1].innerHTML = nombre.value;
+  tablaJuego.children[posicionVideojuego].children[2].innerHTML = descripcion.value;
+  tablaJuego.children[posicionVideojuego].children[3].innerHTML = precio.value;
+  tablaJuego.children[posicionVideojuego].children[4].innerHTML = categoria.value;
+  tablaJuego.children[posicionVideojuego].children[5].innerHTML = desarrollador.value;
 }
