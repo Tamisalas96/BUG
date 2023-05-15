@@ -11,6 +11,7 @@ let codigo = document.getElementById("codigo"),
   desarrollador = document.getElementById("desarrollador"),
   requisitos = document.getElementById("requisitos");
   let modalVideojuego = new bootstrap.Modal(document.getElementById("modal-admin-juegos"))
+  let verificarCrearVideojuego = true // si esta en true, crea el videojuego sino lo edita 
 //array de objetos de tipo Videojuego
 let lista_de_juegos = localStorage.getItem("lista_de_juegos");
 if (!lista_de_juegos) {
@@ -129,7 +130,11 @@ function crearVideojuego() {
 }
 function prepararForm(e) {
   e.preventDefault();
-  crearVideojuego();
+  if (verificarCrearVideojuego) {
+    crearVideojuego();
+  } else {
+    editarVideojuego()
+  }
 }
 
 window.prepararJuego = (codigoBuscado)=>{
@@ -143,4 +148,19 @@ precio.value = juegoBuscado.precio;
 imagen.value = juegoBuscado.imagen;
 desarrollador.value = juegoBuscado.desarrollador;
 requisitos.value = juegoBuscado.requisitos;
+
+verificarCrearVideojuego = false
+}
+
+function editarVideojuego(){
+ let posicion_del_Videojuego = lista_de_juegos.findIndex((videojuego)=>videojuego.codigo === codigo.value)
+ lista_de_juegos[posicion_del_Videojuego].nombre = nombre.value
+ lista_de_juegos[posicion_del_Videojuego].descripcion = descripcion.value
+ lista_de_juegos[posicion_del_Videojuego].categoria = categoria.value
+ lista_de_juegos[posicion_del_Videojuego].precio = precio.value
+ lista_de_juegos[posicion_del_Videojuego].imagen = imagen.value
+ lista_de_juegos[posicion_del_Videojuego].desarrollador = desarrollador.value
+ lista_de_juegos[posicion_del_Videojuego].requisitos = requisitos.value
+ guardarLocal();
+
 }
