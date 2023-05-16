@@ -1,47 +1,43 @@
-const juegosElements = document.querySelectorAll(".juego");
-
-const juegosObj = Array.from(juegosElements).map(juegoElement => {
-  const nombre = juegoElement.querySelector(".card-title").textContent;
-  const imagen = juegoElement.querySelector(".card-img-top").src;
-  const descripcion = juegoElement.querySelector(".card-text").textContent;
-  const generos = Array.from(juegoElement.querySelectorAll(".card-text")).map(generoElement => generoElement.textContent);
-  return {
-    nombre,
-    imagen,
-    descripcion,
-    generos,
-    getElement: function() {
-      juegoElement.querySelector(".card-title").textContent = this.nombre;
-      juegoElement.querySelector(".card-img-top").src = this.imagen;
-      juegoElement.querySelector(".card-text").textContent = this.descripcion;
-      return juegoElement;
-    }
-  };
-});
-
-
-function buscarJuegos(event) {
-  event.preventDefault();
-  const busqueda = document.querySelector("#searchbar").value.toLowerCase().trim();
-  const resultados = juegosObj.filter(juego => {
-    const nombreIncluido = juego.nombre.toLowerCase().includes(busqueda);
-    const generoIncluido = juego.generos.some(genero => genero.toLowerCase().includes(busqueda));
-    return nombreIncluido || generoIncluido;
-  });
-  const contenedorResultados = document.querySelector("#resultados");
-  contenedorResultados.innerHTML = "";
-  contenedorResultados.classList.add("container-fluid", "mt-3", "row")
-  if (resultados.length > 0) {
-    resultados.forEach(resultado => {
-      contenedorResultados.appendChild(resultado.getElement());
-    });
+import Videojuego from "./classVideojuego.js";  let lista_de_juegos = localStorage.getItem("lista_de_juegos"); if (!lista_de_juegos) {   lista_de_juegos = []; } else {   lista_de_juegos = JSON.parse(lista_de_juegos).map(     (videojuego) =>       new Videojuego(         videojuego.codigo,         videojuego.nombre,         videojuego.descripcion,         videojuego.categoria,         videojuego.precio,         videojuego.imagen,         videojuego.desarrollador,         videojuego.requisitos       )   ); } let formularioBusqueda = document.querySelector("#formulario") let campoBusqueda = document.querySelector("#searchbar");  formularioBusqueda.addEventListener("submit", (eventito)=>{   eventito.preventDefault();   if(campoBusqueda.value != null) {       let contenedor = document.querySelector("#filaJuegos");       let resultados = 0;       contenedor.innerHTML = "";       lista_de_juegos.forEach(Videojuego => {           console.log(Videojuego)           if( Videojuego.nombre.toUpper
+  import Videojuego from "./classVideojuego.js";
+  
+  let lista_de_juegos = localStorage.getItem("lista_de_juegos");
+  if (!lista_de_juegos) {
+    lista_de_juegos = [];
   } else {
-    const mensajeError = document.createElement("div");
-    mensajeError.classList.add("alert", "alert-danger", "container");
-    mensajeError.textContent = "No se encontraron resultados";
-    contenedorResultados.appendChild(mensajeError);
+    lista_de_juegos = JSON.parse(lista_de_juegos).map(
+      (videojuego) =>
+        new Videojuego(
+          videojuego.codigo,
+          videojuego.nombre,
+          videojuego.descripcion,
+          videojuego.categoria,
+          videojuego.precio,
+          videojuego.imagen,
+          videojuego.desarrollador,
+          videojuego.requisitos
+        )
+    );
   }
-}
-
-const formulario = document.querySelector("#formulario");
-formulario.addEventListener("submit", buscarJuegos);
+  let formularioBusqueda = document.querySelector("#formulario")
+  let campoBusqueda = document.querySelector("#searchbar");
+  
+  formularioBusqueda.addEventListener("submit", (eventito)=>{
+    eventito.preventDefault();
+    if(campoBusqueda.value != null) {
+        let contenedor = document.querySelector("#filaJuegos");
+        let resultados = 0;
+        contenedor.innerHTML = "";
+        lista_de_juegos.forEach(Videojuego => {
+            console.log(Videojuego)
+            if( Videojuego.nombre.toUpperCase().trim().includes(campoBusqueda.value.toUpperCase()) || 
+                Videojuego.categoria.toUpperCase().trim().includes(campoBusqueda.value.toUpperCase())){
+  
+                Videojuego.imprimirCard();
+                resultados++
+            }
+        });
+        if(resultados === 0) contenedor.innerHTML = '<h1 class="text-center p-2">La busqueda no dio resultados</h1>';
+    }
+  
+  })
