@@ -13,6 +13,21 @@ import Usuario from "./usuario.js"
       }, false)
     })
   })()
+
+  let usuarioLogeado = JSON.parse(sessionStorage.getItem("perfil")) || {} ;
+
+if(usuarioLogeado.email){
+    let logout = document.querySelector("#logout")
+    let login = document.querySelector("#login")
+    let admin = document.querySelector("#admin")
+    let nosotros = document.querySelector("#nosotros")
+    logout.classList.toggle("d-none")
+    login.classList.toggle("d-none")
+    if(usuarioLogeado.email === "admin@admin.com"){
+      admin.classList.toggle("d-none")
+      nosotros.classList.toggle("d-none")
+    }
+}
   // variables 
   let formlogin = document.getElementById('formlogin')
   let administrador = new Usuario("admin@admin.com", "contraseña")
@@ -36,3 +51,8 @@ function login(e){
     window.location.href = window.location.origin + '/index.html';
   }
 }
+
+window.borrarSessionStorage = () => {
+  sessionStorage.clear();
+}
+

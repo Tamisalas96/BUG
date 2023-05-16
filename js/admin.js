@@ -3,12 +3,22 @@ import { sumarioValidaciones } from "./helpers.js";
 
 
 let usuarioLogeado = JSON.parse(sessionStorage.getItem("perfil")) || {};
-if(usuarioLogeado.email === "admin@admin.com"){
-    
-}else{
-    window.location.href = window.location.origin + "/index.html"
-}
 
+if(usuarioLogeado.email){
+    if(usuarioLogeado.email === "admin@admin.com"){
+        let logout = document.querySelector("#logout")
+        let login = document.querySelector("#login")
+        let admin = document.querySelector("#admin")
+        let nosotros = document.querySelector("#nosotros")
+        logout.classList.toggle("d-none")
+        login.classList.toggle("d-none")
+        admin.classList.toggle("d-none")
+        nosotros.classList.toggle("d-none")
+
+    }else{
+        window.location.href = window.location.origin + "/index.html"
+    }
+}
 
 // variables
 let formJuegos = document.getElementById("formJuegos");

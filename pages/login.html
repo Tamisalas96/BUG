@@ -40,11 +40,16 @@
                     <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="">Acerca de nosotros</a>
+                    <a class="nav-link" id="nosotros" href="./nosotros.html">Acerca de nosotros</a>
                   </li> 
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../pages/login.html">Login</a>
+                    <a class="nav-link d-none" id="admin" href="./admin.html">Administrador</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" id="login" aria-current="page" href="./login.html">Login</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link d-none" id="logout" onclick="borrarSessionStorage()" aria-current="page" href="../index.html">Logout</a>
                   </li>
                   <li class="nav-item dropdown">
                     <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,7 +58,6 @@
                     <ul class="dropdown-menu">
                       <li><button class="dropdown-item" id="btnThemeDark" ><i class="fa-sharp fa-solid fa-moon"></i> Dark</button></li>
                       <li><button class="dropdown-item" id="btnThemeLight"><i class="fa-regular fa-sun"></i> Light</button></li>
-                     
                     </ul>
                   </li>
                 </ul>
@@ -185,7 +189,7 @@
         <aside class="col-lg-4">
           <a
             class="text-light text-center footer-centrado"
-            href="./pages/nosotros.html"
+            href="./nosotros.html"
             ><h5>Acerca de nosotros</h5></a
           >
         </aside>
