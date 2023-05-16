@@ -5,6 +5,20 @@ const seccionDetalle =  document.getElementById('detalleJuego');
 
 
 let usuarioLogeado = JSON.parse(sessionStorage.getItem("perfil")) || {};
+
+if(usuarioLogeado.email){
+    let logout = document.querySelector("#logout")
+    let login = document.querySelector("#login")
+    let admin = document.querySelector("#admin")
+    let nosotros = document.querySelector("#nosotros")
+    logout.classList.toggle("d-none")
+    login.classList.toggle("d-none")
+    if(usuarioLogeado.email === "admin@admin.com"){
+      admin.classList.toggle("d-none")
+      nosotros.classList.toggle("d-none")
+    }
+}
+
 if(usuarioLogeado.email){
     seccionDetalle.innerHTML = `
     <aside class="col-md-6 col-lg-6 mb-5">
