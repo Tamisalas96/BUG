@@ -33,6 +33,8 @@ console.log('El local storage se cargó correctamente');
 window.enviarDetalleJuego = (codigo) => {
   console.log(codigo);
   const url = `${window.location.origin}/pages/detalles.html?codigo=${codigo}`;
-  console.log(url);
   window.location.href = url;
 };
+
+
+  
