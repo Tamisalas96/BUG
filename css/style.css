@@ -172,7 +172,10 @@ a{
     object-fit: cover;
   }
 }
-
+.nuestroEquipo {
+  background: rgb(185,9,11);
+  background: radial-gradient(circle, rgba(185,9,11,1) 68%, rgba(255,252,252,1) 86%);
+}
 .logo{
   
   height: 60px;
@@ -185,4 +188,3 @@ a{
   position: relative;
   top:20%;
 }
-
