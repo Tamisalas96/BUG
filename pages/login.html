@@ -10,7 +10,6 @@
     <meta name="author" content="Bruno Nicolas	Leonard, Matias Emanuel	Ruiz Villalobo, Lucio Lazarte, Santiago Alejandro Escobar Torres, Tamara Salas">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
     <title>BUG</title>
 </head>
 <body>
@@ -82,35 +81,35 @@
                     <div class="row mt-3">
                         <div class="col">
                             <label>Nombre</label>
-                            <input type="text" class="form-control" id="nombre" required>
+                            <input type="text" class="form-control" id="nombre" required placeholder="Escriba su nombre" minlength="2" maxlength="100" min="2" max="100">
                             <div class="col">
                                 <label>Apellido</label>
-                               <input type="text" class="form-control" id="apellido" required>
+                               <input type="text" class="form-control" id="apellido" required placeholder="Escriba su apellido">
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col">
                             <label>Email</label>
-                            <input type="email" class="form-control" id="email2" required minlength="5" maxlength="100" autofocus> 
+                            <input type="email" class="form-control" id="email2" required minlength="5" maxlength="100" autofocus placeholder="Escriba su email" min="5" max="100"> 
                          </div>
                     </div>
                     <div class="row mt-3">
                          <div class="col">
                             <label>Usuario</label>
-                            <input type="text" class="form-control" id="usuario" required minlength="5" maxlength="20">
+                            <input type="text" class="form-control" id="usuario" required minlength="5" maxlength="20" required placeholder="Escriba un nombre de usuario" min="5" max="20">
                         </div>
                     </div>
                       <div class="row mt-3">
                         <div class="col">
                          <label>Contraseña</label>
-                         <input type="password" class="form-control" id="contraseña" required minlength="5" maxlength="120">
+                         <input type="password" class="form-control" id="contraseña" required minlength="5" maxlength="120" placeholder="Escriba una contraseña">
                         </div>
                       </div>
                       
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary" id="crearUsuario">Crear Usuario</button>
+                    <button type="submit" class="btn btn-danger" id="crearUsuario">Crear Usuario</button>
                   </div>
                   </form>
             </div>
@@ -131,6 +130,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="../js/tema.js"></script>
     <script src="../js/registro.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
