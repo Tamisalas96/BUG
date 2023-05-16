@@ -70,19 +70,24 @@ export default class Videojuego{
     }
 
     imprimirCard(){
-        let contenedorCards = document.getElementById('filaJuegos')
+        let contenedorCards = document.getElementById('listaJuegos')
+        contenedorCards.innerHTML = ''
         let card = document.createElement('aside')
-        card.className='col-12 col-md-4 d-flex justify-content-center mb-5'
+        card.className='d-flex justify-content-center mb-5'
         card.innerHTML = `
-        <div class="card">
-        <img src="${this.imagen}" class="card-img-top d-inline-block" alt="...">
-        <div class="card-body d-flex flex-column justify-content-between ">
-          <h5 class="card-title">${this.nombre}</h5>
-          <p class="card-text card-description">${this.descripcion}</p>
-          <p class="card-text text-start"><small class="text-body-secondary"><i class="bi bi-clock text-danger"></i>${this.categoria}</small></p>
-          <a href="../pages/${this.codigo}.html" class="btn css-button-sliding-to-left--red align-self-start">Ver mas</a>
-        </div>
-        </div>`    
+        <aside class="col-md-6 col-lg-3 mb-3">
+        <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+          <img src="${this.imagen}" class="card-img-top rounded-0"/>
+          <div class="card-body">
+            <h5 class="card-title">${this.nombre}</h5>
+            <p class="card-text">
+              ${this.categoria}
+            </p>
+            <button class="btn btn-red rounded-0 text-light" onclick="enviarDetalleJuego('${this.codigo}')">Detalles</button>
+          </div>
+        </article>
+      </aside>
+    `    
       contenedorCards.appendChild(card)
       }
 
