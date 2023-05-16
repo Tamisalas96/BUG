@@ -87,7 +87,7 @@ a{
     background-attachment: fixed;
   }
   
-  .seccion1:nth-child(3) {
+  .seccion1:nth-child(2) {
     background-image: url(../img/recorte.png);
   }
   

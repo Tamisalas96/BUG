@@ -15,43 +15,44 @@
 </head>
 <body>
     <header>   
-        <nav class="navbar navbar-expand-lg colorNav">
-            <div class="container-fluid ">
-                <img src="./img/Bug.png" alt="logo bug" class="w-25 h-25">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active " aria-current="page" href="./index.html"> <h5>Inicio</h5></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/nosotros.html"> <h5>Acerca de nosotros</h5></a>
-                  </li> 
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./pages/login.html"> <h5>Login</h5></a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa-sharp fa-solid fa-moon"></i>
-                    </span>
-                    <ul class="dropdown-menu">
-                      <li><button class="dropdown-item" id="btnThemeDark" ><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
-                      <li><button class="dropdown-item" id="btnThemeLight"><i class="bi bi-brightness-high-fill"></i> Light</button></li>
-                     
-                    </ul>
-                  </li>
+      <nav class="navbar navbar-expand-lg colorNav">
+        <div class="container-fluid color">
+            <img src="../img/Bug (1).png" alt="logo bug" width="150px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/nosotros.html">Acerca de nosotros</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/pages/login.html">Login</a>
+              </li>
+              </li>
+              <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-sharp fa-solid fa-moon"></i>
+                </span>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" id="btnThemeDark" ><i class="fa-sharp fa-solid fa-moon"></i> Dark</button></li>
+                  <li><button class="dropdown-item" id="btnThemeLight"><i class="fa-regular fa-sun"></i> Light</button></li>
+                 
                 </ul>
-                <form class="d-flex rounded-0" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                  <button class="btn btn-outline-dark border-0" type="submit">Buscar</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar..." aria-label="Search">
+              <button class="btn btn-outline-dark border-0" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main class="min-vh-100">
       <section id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -99,6 +100,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </section>
+      <section id="resultados">
       <section class="container">
         <article class="row mt-5 mb-5">
           <a href="./pages/error404.html" class="col-md-4 mb-3 links-color">
@@ -141,333 +143,264 @@
               class="bi bi-chevron-compact-right"></i></button>
         </section>
       </section>
-      <section class="container">
-        <section class="my-4" id="resultados">
-          <h2 class="display-4 fw-bold mt-5 mb-5">Nuevos lanzamientos</h2>
-          <article class="row" id="listajuegos">
-            <aside class="col-md-6 col-lg-3 mb-3">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/qRplKbpzcLSWT3PB4Gu7t4NB.webp" class="card-img-top rounded-0" alt="MBL SHOW" />
-                <div class="card-body">
-                  <h5 class="card-title">MBL The Show</h5>
-                  <p class="card-text">
-                    Deportes
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto8">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/cs2.jpg" class="card-img-top rounded-0" alt="Counter Strike 2" />
-                <div class="card-body">
-                  <h5 class="card-title">Counter Strike 2</h5>
-                  <p class="card-text">
-                    Shooter
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Days Gone">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/daysgone.jpg" class="card-img-top rounded-0" alt="Elden Ring" />
-                <div class="card-body">
-                  <h5 class="card-title">Days Gone</h5>
-                  <p class="card-text">
-                    Aventura
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto1">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="UFC 4">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/ufc4.png" class="card-img-top rounded-0" alt="UFC" />
-                <div class="card-body">
-                  <h5 class="card-title">UFC 4</h5>
-                  <p class="card-text">
-                    Accion, Deportes
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto2">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Need For Speed">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/needforspeed.png" class="card-img-top rounded-0" alt="Need For Speed" />
-                <div class="card-body">
-                  <h5 class="card-title">Need For Speed</h5>
-                  <p class="card-text">
-                    Carreras
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto3">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Warframe">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/warframe.png" class="card-img-top rounded-0" alt="Warframe" />
-                <div class="card-body">
-                  <h5 class="card-title">Warframe</h5>
-                  <p class="card-text">
-                    Accion
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto4">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Fifa 23">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/fifa23.jpg" class="card-img-top rounded-0" alt="fifa23" />
-                <div class="card-body">
-                  <h5 class="card-title">Fifa 23</h5>
-                  <p class="card-text">
-                    Deportes
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto5">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="APEX">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/apex.jpg" class="card-img-top rounded-0" alt="Apex Legends" />
-                <div class="card-body">
-                  <h5 class="card-title">APEX</h5>
-                  <p class="card-text">
-                    Accion, Shooter FPS
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto6">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <aside class="col-md-6 col-lg-3 mb-3" data-nombre="Metrodo Exodus">
-              <article class="card w-100 h-100 rounded-0 cards-disenio">
-                <img src="./img/Juegos/metroexodus.jpg" class="card-img-top rounded-0" alt="Metro Exodus" />
-                <div class="card-body">
-                  <h5 class="card-title">Metro Exodus</h5>
-                  <p class="card-text">
-                    Accion, Aventura
-                  </p>
-                  <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal"
-                    data-bs-target="#modalProducto7">Ver mas</button>
-                </div>
-              </article>
-            </aside>
-            <section class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">Counter-Strike 2
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/cs2.jpg" alt="CS2" class="mb-3 w-100" />
-                    <p>
-                      Counter-Strike: Global Offensive (CS:GO) amplía el juego de acción por equipos del que fue pionera
-                      la franquicia cuando salió hace 19 años. CS:GO trae nuevos mapas, personajes, armas y modos de
-                      juego, y ofrece versiones actualizadas del contenido clásico de CS
-                    </p>
-                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+      <section class="container my-4">
+        <h2 class="display-3 fw-bold">Mas buscados</h2>
+        <hr>
+        <section class="row" id="listajuegos">
+          <aside class="col-md-6 col-lg-3 mb-3 juego">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/cs2.jpg" class="card-img-top rounded-0" alt="Counter Strike 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Counter Strike 2</h5>
+                <p class="card-text">
+                  Shooter
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto1" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">Days Gone
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/daysgone.jpg" alt="Days Gone" class="mb-3 w-100" />
-                    <p>
-                      Conduce y lucha en Estados Unidos, un lugar letal tras una pandemia. Juega como Deacon St. John, un
-                      motociclista errante y cazarrecompensas que viaja por el camino averiado y lucha por sobrevivir a la
-                      vez que busca una razón para vivir en este juego de acción y aventura en un mundo abierto.
-                    </p>
-                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="Days Gone">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/daysgone.jpg" class="card-img-top rounded-0" alt="Elden Ring"/>
+              <div class="card-body">
+                <h5 class="card-title">Days Gone</h5>
+                <p class="card-text">
+                  Aventura
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto1">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto2" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">UFC 4
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/ufc4.png" alt="UFC 4" class="mb-3 w-100" />
-                    <p>
-                      UFC 4 introduce la tecnología Real Player Motion (tecnología RPM) en el arte del "cierre", para dar
-                      lugar a una experiencia fluida en función del posicionamiento y del contexto físico. Gracias a esta
-                      tecnología, el cierre se integra como parte del sistema de golpeo.
-                    </p>
-                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="UFC 4">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/ufc4.png" class="card-img-top rounded-0" alt="UFC"/>
+              <div class="card-body">
+                <h5 class="card-title">UFC 4</h5>
+                <p class="card-text">
+                  Accion, Deportes
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto2">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto3" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">UFC 4
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/needforspeed.png" alt="UFC 4" class="mb-3 w-100" />
-                    <p>
-                      Escala hasta la cima y no te despistes. Burla a la policía y participa en las eliminatorias
-                      semanales para el Grand: la carrera callejera definitiva. Llena tu garage con autos personalizados
-                      con detalles precisos y deslumbra las calles con tu estilo.
-                    </p>
-                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="Need For Speed">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/needforspeed.png" class="card-img-top rounded-0" alt="Need For Speed"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Need For Speed</h5>
+                <p class="card-text">
+                  Carreras
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto3">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto4" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">Warframe
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/warframe.png" alt="Warframe" class="mb-3 w-100" />
-                    <p>
-                      Awaken as an unstoppable warrior and battle alongside your friends in this story-driven free-to-play
-                      online action game
-                    </p>
-                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="Warframe">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/warframe.png" class="card-img-top rounded-0" alt="Warframe"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Warframe</h5>
+                <p class="card-text">
+                  Accion
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto4">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto5" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">FIFA 23
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/fifa23.jpg" alt="FIFA" class="mb-3 w-100" />
-                    <p>
-                      FIFA 23 te trae todo el realismo del Juego de Todos con la tecnología HyperMotion2, la FIFA World
-                      Cup™ masculina y femenina, que estarán disponibles durante la temporada, equipos de clubes
-                      femeniles, el Cross-Play* y mucho más.
-                    </p>
-                    <a href="./pages/error404.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/error404.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="Fifa 23">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/fifa23.jpg" class="card-img-top rounded-0" alt="fifa23"/>
+              <div class="card-body">
+                <h5 class="card-title">Fifa 23</h5>
+                <p class="card-text">
+                  Deportes
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto5">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto6" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">APEX
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/apex.jpg" alt="APEX" class="mb-3 w-100" />
-                    <p>
-                      Apex Legends es el galardonado juego de disparos de héroes gratuito de Respawn Entertainment.
-                      Controla un elenco en aumento de personajes con habilidades poderosas y disfruta del juego
-                      estratégico por escuadrones y de la dinámica de juego innovadora del nuevo Battle Royale de
-                    </p>
-                    <a href="./pages/apex.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/apex.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="APEX">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/apex.jpg" class="card-img-top rounded-0" alt="Apex Legends"/>
+              <div class="card-body">
+                <h5 class="card-title">APEX</h5>
+                <p class="card-text">
+                  Accion, Shooter FPS
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto6">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto7" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">Metro Exodus
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/metroexodus.jpg" alt="Metro" class="mb-3 w-100" />
-                    <p>
-                      Huye de las ruinas destrozadas del Metro de Moscú y emprende un épico viaje que atraviesa todo el
-                      continente a través de los desolados paisajes post-apocalípticos de Rusia. Explora amplios niveles
-                      no lineales, sumérgete en una experiencia de supervivencia inmersiva y con gran libertad de acción,
-                      y sigue una emocionante trama que se extiende a lo largo de todo un año en el juego.
-                    </p>
-                    <a href="./pages/metro.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/metro.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <aside class="col-md-6 col-lg-3 mb-3 juego" data-nombre="Metrodo Exodus">
+            <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+              <img src="./img/Juegos/metroexodus.jpg" class="card-img-top rounded-0" alt="Metro Exodus"/>
+              <div class="card-body">
+                <h5 class="card-title">Metro Exodus</h5>
+                <p class="card-text">
+                  Accion, Aventura
+                </p>
+                <button class="btn btn-red rounded-0 text-light" data-bs-toggle="modal" data-bs-target="#modalProducto7">Ver mas</button>
               </div>
-            </section>
-            <section class="modal fade" id="modalProducto8" tabindex="-1" aria-labelledby="modalProductoLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content rounded-0">
-                  <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="modalProductoLabel">Metro Exodus
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="./img/Juegos/qRplKbpzcLSWT3PB4Gu7t4NB.webp" alt="Metro" class="mb-3 w-100" />
-                    <p>
-                      Una experiencia realista y auténtica de la Major League Baseball (MLB), con jugadores y equipos
-                      reales, estadios icónicos y estadísticas precisas.<br>
-                      El juego incluye varios modos de juego, como el modo carrera, el modo exhibición y el modo Diamond
-                      Dynasty, que permite a los jugadores construir y personalizar su propio equipo. También hay un modo
-                      de juego en línea que permite a los jugadores competir contra otros jugadores en línea.<br>
-                      MLB The Show 23 presenta gráficos y animaciones mejoradas, una mecánica de juego mejorada y una
-                      experiencia de sonido inmersiva. Además, los jugadores pueden personalizar su equipo con uniformes y
-                      equipos auténticos de la MLB, y pueden competir en diferentes ligas y divisiones.
-                    </p>
-                    <a href="./pages/metro.html" class="btn btn-red rounded-0 text-center text-light">Detalles</a>
-                    <a href="./pages/metro.html" class="btn text-center">Comprar</a>
-                  </div>
-                </div>
+            </article>
+          </aside>
+          <section class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">Counter-Strike 2
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-            </section>
-          </article>
+              <div class="modal-body">
+                <img src="./img/Juegos/cs2.jpg" alt="CS2" class="mb-3 w-100 rounded-0"/>
+                <p>
+                  Counter-Strike: Global Offensive (CS:GO) amplía el juego de acción por equipos del que fue pionera la franquicia cuando salió hace 19 años. CS:GO trae nuevos mapas, personajes, armas y modos de juego, y ofrece versiones actualizadas del contenido clásico de CS 
+                </p>
+                <a href="./pages/cs2.html" class="btn btn-red text-light rounded-0 text-center">Detalles</a>
+                <a href="./pages/cs2.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto1" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">Days Gone
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/daysgone.jpg" alt="Days Gone" class="mb-3 w-100"/>
+                <p>
+                  Conduce y lucha en Estados Unidos, un lugar letal tras una pandemia. Juega como Deacon St. John, un motociclista errante y cazarrecompensas que viaja por el camino averiado y lucha por sobrevivir a la vez que busca una razón para vivir en este juego de acción y aventura en un mundo abierto. 
+                </p>
+                <a href="./pages/daysgone.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/daysgone.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto2" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">UFC 4
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/ufc4.png" alt="UFC 4" class="mb-3 w-100"/>
+                <p>
+                  UFC 4 introduce la tecnología Real Player Motion (tecnología RPM) en el arte del "cierre", para dar lugar a una experiencia fluida en función del posicionamiento y del contexto físico. Gracias a esta tecnología, el cierre se integra como parte del sistema de golpeo. 
+                </p>
+                <a href="./pages/ufc.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/ufc.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto3" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">UFC 4
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/needforspeed.png" alt="UFC 4" class="mb-3 w-100"/>
+                <p>
+                  Escala hasta la cima y no te despistes. Burla a la policía y participa en las eliminatorias semanales para el Grand: la carrera callejera definitiva. Llena tu garage con autos personalizados con detalles precisos y deslumbra las calles con tu estilo. 
+                </p>
+                <a href="./pages/needforspeed.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/needforspeed.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto4" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">Warframe
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/warframe.png" alt="Warframe" class="mb-3 w-100"/>
+                <p>
+                  Awaken as an unstoppable warrior and battle alongside your friends in this story-driven free-to-play online action game 
+                </p>
+                <a href="./pages/warframe.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/warframe.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto5" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">FIFA 23
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/fifa23.jpg" alt="FIFA" class="mb-3 w-100"/>
+                <p>
+                  FIFA 23 te trae todo el realismo del Juego de Todos con la tecnología HyperMotion2, la FIFA World Cup™ masculina y femenina, que estarán disponibles durante la temporada, equipos de clubes femeniles, el Cross-Play* y mucho más.
+                </p>
+                <a href="./pages/fifa23.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/fifa23.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto6" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">APEX
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/apex.jpg" alt="APEX" class="mb-3 w-100"/>
+                <p>
+                  Apex Legends es el galardonado juego de disparos de héroes gratuito de Respawn Entertainment. Controla un elenco en aumento de personajes con habilidades poderosas y disfruta del juego estratégico por escuadrones y de la dinámica de juego innovadora del nuevo Battle Royale de 
+                </p>
+                <a href="./pages/apex.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/apex.html" class="btn text-center">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="modal fade" id="modalProducto7" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalProductoLabel">Metro Exodus
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="./img/Juegos/metroexodus.jpg" alt="Metro" class="mb-3 w-100"/>
+                <p>
+                  Huye de las ruinas destrozadas del Metro de Moscú y emprende un épico viaje que atraviesa todo el continente a través de los desolados paisajes post-apocalípticos de Rusia. Explora amplios niveles no lineales, sumérgete en una experiencia de supervivencia inmersiva y con gran libertad de acción, y sigue una emocionante trama que se extiende a lo largo de todo un año en el juego. 
+                </p>
+                <a href="./pages/metro.html" class="btn btn-red text-light text-center rounded-0">Detalles</a>
+                <a href="./pages/metro.html" class="btn text-center rounded-0">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </section>
         </section>
       </section>
+    </section>
     </main>
     <footer class="text-secondary py-4 colorNav container-fluid" >
       <section class="row d-flex">

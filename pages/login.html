@@ -25,84 +25,48 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>BUG</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg colorNav">
-        <div class="container-fluid color">
-          <img src="../img/Bug (1).png" alt="logo bug" width="150px" />
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">Acerca de nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="../pages/login.html"
-                  >Login</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <span
-                  class="nav-link dropdown-toggle"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fa-sharp fa-solid fa-moon"></i>
-                </span>
-                <ul class="dropdown-menu">
-                  <li>
-                    <button class="dropdown-item" id="btnThemeDark">
-                      <i class="fa-sharp fa-solid fa-moon"></i> Dark
-                    </button>
+</head>
+<body>
+    <header>   
+        <nav class="navbar navbar-expand-lg colorNav">
+            <div class="container-fluid color">
+                <img src="../img/Bug (1).png" alt="logo bug" width="150px">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                   </li>
-                  <li>
-                    <button class="dropdown-item" id="btnThemeLight">
-                      <i class="fa-regular fa-sun"></i> Light
-                    </button>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Acerca de nosotros</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/login.html">Login</a>
+                  </li>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-sharp fa-solid fa-moon"></i>
+                    </span>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" id="btnThemeDark" ><i class="fa-sharp fa-solid fa-moon"></i> Dark</button></li>
+                      <li><button class="dropdown-item" id="btnThemeLight"><i class="fa-regular fa-sun"></i> Light</button></li>
+                     
+                    </ul>
                   </li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2 rounded-0"
-                type="search"
-                placeholder="Buscar..."
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-dark border-0" type="submit">
-                Buscar
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
+              </div>
+            </div>
+          </nav>
     </header>
-    <main>
+    <main class="min-vh-100">
       <section class="container d-flex justify-content-center">
         <form
           class="row mt-4 g-2 align-content-center flex-column card-login mt-5 col-xl-6 col-12 needs-validation"
           novalidate
+          id="formlogin"
         >
           <div class="col-sm-8 col-lg-4 col-xl-8 mt-5">
             <h2>Iniciar sesion</h2>
@@ -120,7 +84,7 @@
               required
             />
             <div class="valid-feedback"><i class="bi bi-person-check-fill"></i></i></div>
-            <div class="invalid-feedback">ingrese su nombre de usuario</div>
+            <div class="invalid-feedback">ingrese un email valido</div>
           </div>
           <div class="col-sm-8 col-lg-4 col-xl-8 mt-3">
             <label for="inputPassword" class="visually-hidden"
@@ -142,6 +106,7 @@
             <button
               type="submit"
               class="btn btn-red mb-3 rounded-0 w-100 text-light fw-bold"
+              id="btnLogin"
             >
               CONTINUAR
             </button>
@@ -185,6 +150,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/tema.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/login.js" type="module"></script>
   </body>
 </html>
