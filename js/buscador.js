@@ -24,7 +24,6 @@ formularioBusqueda.addEventListener("submit", (eventito)=>{
   eventito.preventDefault();
   if(campoBusqueda.value != null) {
       let contenedorCards = document.querySelector('#listaJuegos')
-      console.log(contenedorCards)
       let contenedor = document.querySelector("#filaJuegos");
       let resultados = 0;
       contenedorCards.innerHTML = "";

@@ -3,9 +3,7 @@ formUser.addEventListener('submit', (e)=>{
   e.preventDefault()
   const nombre = document.querySelector('#nombre').value
   const apellido = document.querySelector('#apellido').value
-  console.log(apellido)
   const email = document.querySelector('#email2').value
-  console.log(email)
   const usuario = document.querySelector('#usuario').value
   const contraseña = document.querySelector('#contraseña').value
    
