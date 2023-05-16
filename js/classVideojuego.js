@@ -71,7 +71,6 @@ export default class Videojuego{
 
     imprimirCard(){
         let contenedorCards = document.getElementById('filaJuegos')
-        console.log(contenedorCards)
         let card = document.createElement('aside')
         card.className='col-12 col-md-4 d-flex justify-content-center mb-5'
         card.innerHTML = `
@@ -84,7 +83,6 @@ export default class Videojuego{
           <a href="../pages/${this.codigo}.html" class="btn css-button-sliding-to-left--red align-self-start">Ver mas</a>
         </div>
         </div>`    
-        console.log(card)
       contenedorCards.appendChild(card)
       }
 
