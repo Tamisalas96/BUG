@@ -33,6 +33,6 @@ function login(e){
     console.log("no entrar")
     sessionStorage.setItem('perfil', JSON.stringify(usuario))
     perfilSeleccionado = JSON.parse(sessionStorage.getItem(usuario));
-    window.location.href = window.location.origin + '/pages/login.html';
+    window.location.href = window.location.origin + '/index.html';
   }
 }
