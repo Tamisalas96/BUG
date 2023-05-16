@@ -18,7 +18,7 @@ function cargaInicial() {
         <p class="card-text">
           ${juego.categoria}
         </p>
-        <button class="btn btn-red rounded-0 text-light">Ver mas</button>
+        <button class="btn btn-red rounded-0 text-light" onclick="enviarDetalleJuego('${juego.codigo}')">Detalles</button>
       </div>
     </article>
   </aside>
@@ -32,7 +32,7 @@ console.log('El local storage se cargó correctamente');
 
 window.enviarDetalleJuego = (codigo) => {
   console.log(codigo);
-  const url = `${window.location.origin}/pages/detalle.html?codigo=${codigo}`;
+  const url = `${window.location.origin}/pages/detalles.html?codigo=${codigo}`;
   console.log(url);
   window.location.href = url;
 };
