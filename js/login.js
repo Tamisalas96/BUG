@@ -40,12 +40,10 @@ formlogin.addEventListener("submit", login)
 function login(e){
   e.preventDefault()
   if (email.value === administrador.email && inputPassword.value === administrador.contrasena){
-    console.log("entrar")
     sessionStorage.setItem('perfil', JSON.stringify(administrador))
     perfilSeleccionado = JSON.parse(sessionStorage.getItem(administrador));
     window.location.href = window.location.origin + '/pages/admin.html';
   } else {
-    console.log("no entrar")
     sessionStorage.setItem('perfil', JSON.stringify(usuario))
     perfilSeleccionado = JSON.parse(sessionStorage.getItem(usuario));
     window.location.href = window.location.origin + '/index.html';
