@@ -19,7 +19,7 @@ formUser.addEventListener('submit', (e)=>{
   }else{
    Users.push({nombre:nombre, apellido: apellido, email: email, usuario: usuario, contraseña: contraseña})
     localStorage.setItem('users', JSON.stringify(Users))
-   alert('Registro exitoso!')
+    alert('REGISTRO EXITOSO!')
    window.location.href = 'login.html'
   }
   
