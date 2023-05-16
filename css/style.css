@@ -151,6 +151,10 @@ a{
   right: 15%;
 }
 
+textarea{
+  resize: none;
+}
+
 
 @media all and (min-width: 1px) and (max-width: 767px) {
   .banner {

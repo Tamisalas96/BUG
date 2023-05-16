@@ -69,6 +69,25 @@ export default class Videojuego{
         this.#desarrollador = desarrollador;
     }
 
+    imprimirCard(){
+        let contenedorCards = document.getElementById('listaJuegos')
+        let card = document.createElement('aside')
+        card.className='col-md-6 col-lg-3 mb-3 mb-5'
+        card.innerHTML = 
+        `<article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+          <img src="${this.imagen}" class="card-img-top rounded-0"/>
+          <div class="card-body">
+            <h5 class="card-title">${this.nombre}</h5>
+            <p class="card-text">
+              ${this.categoria}
+            </p>
+            <button class="btn btn-red rounded-0 text-light" onclick="enviarDetalleJuego('${this.codigo}')">Detalles</button>
+          </div>
+        </article>`
+    
+      contenedorCards.appendChild(card)
+    }
+
     toJSON(){
         return{
             codigo: this.codigo,
