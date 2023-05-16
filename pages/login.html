@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/61b9fbaaa5.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esta pagina es un proyecto grupal en RollingCode school sobre una pagina de juegos"
+    />
+    <meta name="keywords" content="html, css, JavaScript, bootstrap, juegos" />
+    <meta
+      name="author"
+      content="Bruno Nicolas	Leonard, Matias Emanuel	Ruiz Villalobo, Lucio Lazarte, Santiago Alejandro Escobar Torres, Tamara Salas"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>BUG</title>
+</head>
+<body>
+    <header>   
+        <nav class="navbar navbar-expand-lg colorNav">
+            <div class="container-fluid color">
+                <img src="../img/Bug (1).png" alt="logo bug" width="150px">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="nosotros" href="./nosotros.html">Acerca de nosotros</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link d-none" id="admin" href="./admin.html">Administrador</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" id="login" aria-current="page" href="./login.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link d-none" id="logout" onclick="borrarSessionStorage()" aria-current="page" href="../index.html">Logout</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-sharp fa-solid fa-moon"></i>
+                    </span>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" id="btnThemeDark" ><i class="fa-sharp fa-solid fa-moon"></i> Dark</button></li>
+                      <li><button class="dropdown-item" id="btnThemeLight"><i class="fa-regular fa-sun"></i> Light</button></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="min-vh-100">
+      <section class="container d-flex justify-content-center">
+        <form
+          class="row mt-4 g-2 align-content-center flex-column card-login mt-5 col-xl-6 col-12 needs-validation"
+          novalidate
+          id="formlogin"
+        >
+          <div class="col-sm-8 col-lg-4 col-xl-8 mt-5">
+            <h2>Iniciar sesion</h2>
+            <hr />
+            <label for="email" class="form-label text-danger ps-2"
+              >Escriba su email y contraseña</label
+            >
+            <input
+              class="form-control text-bg-light rounded-0 border-0 mt-3"
+              type="email"
+              id="email"
+              placeholder="Email@ejemplo.com"
+              minlength="14"
+              maxlength="64"
+              required
+            />
+            <div class="valid-feedback"><i class="bi bi-person-check-fill"></i></i></div>
+            <div class="invalid-feedback">ingrese un email valido</div>
+          </div>
+          <div class="col-sm-8 col-lg-4 col-xl-8 mt-3">
+            <label for="inputPassword" class="visually-hidden"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              class="form-control text-bg-light rounded-0 border-0"
+              id="inputPassword"
+              placeholder="Contraseña"
+              minlength="6"
+              maxlength="64"
+              required
+            />
+            <div class="valid-feedback"><i class="bi bi-check2-circle"></i></i></div>
+            <div class="invalid-feedback">la contraseña debe tener mas de 5 caracteres</div>
+          </div>
+          <div class="col-sm-8 col-lg-4 col-xl-8 mt-4">
+            <button
+              type="submit"
+              class="btn btn-red mb-3 rounded-0 w-100 text-light fw-bold"
+              id="btnLogin"
+            >
+              CONTINUAR
+            </button>
+          </div>
+          <aside
+            class="col-sm-8 col-lg-4 col-xl-8 text-center text-secondary px-2 mb-5"
+          >
+            <p class="d-inline">¿Primer BUG?</p>
+            <a href="../pages/registro.html" class="text-danger" data-bs-toggle="modal" data-bs-target="#modal">Registrarse</a>
+        </form>
+      </section>
+      <div class="modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-danger">
+              <h5 class="modal-title">Crear nuevo usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formUser" class="container">
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required placeholder="Escriba su nombre" minlength="2" maxlength="100" min="2" max="100">
+                            <div class="col">
+                                <label>Apellido</label>
+                               <input type="text" class="form-control" id="apellido" required placeholder="Escriba su apellido">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Email</label>
+                            <input type="email" class="form-control" id="email2" required minlength="5" maxlength="100" autofocus placeholder="Escriba su email" min="5" max="100"> 
+                         </div>
+                    </div>
+                    <div class="row mt-3">
+                         <div class="col">
+                            <label>Usuario</label>
+                            <input type="text" class="form-control" id="usuario" required minlength="5" maxlength="20" required placeholder="Escriba un nombre de usuario" min="5" max="20">
+                        </div>
+                    </div>
+                      <div class="row mt-3">
+                        <div class="col">
+                         <label>Contraseña</label>
+                         <input type="password" class="form-control" id="contraseña" required minlength="5" maxlength="120" placeholder="Escriba una contraseña">
+                        </div>
+                      </div>
+                      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger" id="crearUsuario">Crear Usuario</button>
+                  </div>
+                  </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-secondary py-4 colorNav container-fluid">
+      <section class="row d-flex">
+        <aside class="col-lg-4">
+          <img
+            src="../img/Bug (1).png"
+            alt="logo bug"
+            class="logo"
+            width="150px"
+          />
+        </aside>
+        <aside class="col-lg-4">
+          <h5 class="text-light text-center footer-centrado">
+            &169 Todos los derechos reservados
+          </h5>
+        </aside>
+        <aside class="col-lg-4">
+          <a
+            class="text-light text-center footer-centrado"
+            href="./nosotros.html"
+            ><h5>Acerca de nosotros</h5></a
+          >
+        </aside>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/tema.js"></script>
+    <script src="../js/registro.js"></script>
+    <script src="../js/login.js" type="module"></script>
+  </body>
+</html>
