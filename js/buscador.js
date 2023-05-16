@@ -1,3 +1,4 @@
+import Videojuego from "./classVideojuego.js";
 let lista_de_juegos = localStorage.getItem("lista_de_juegos");
 if (!lista_de_juegos) {
   lista_de_juegos = [];
@@ -26,7 +27,6 @@ formularioBusqueda.addEventListener("submit", (eventito)=>{
       let resultados = 0;
       contenedor.innerHTML = "";
       lista_de_juegos.forEach(Videojuego => {
-          console.log(Videojuego)
           if( Videojuego.nombre.toUpperCase().trim().includes(campoBusqueda.value.toUpperCase()) || 
               Videojuego.categoria.toUpperCase().trim().includes(campoBusqueda.value.toUpperCase())){
 
