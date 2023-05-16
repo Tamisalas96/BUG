@@ -87,7 +87,7 @@ a{
     background-attachment: fixed;
   }
   
-  .seccion1:nth-child(3) {
+  .seccion1:nth-child(2) {
     background-image: url(../img/recorte.png);
   }
   
@@ -175,4 +175,16 @@ a{
 .nuestroEquipo {
   background: rgb(185,9,11);
   background: radial-gradient(circle, rgba(185,9,11,1) 68%, rgba(255,252,252,1) 86%);
+}
+.logo{
+  
+  height: 60px;
+}
+.iconofooter{
+  color: aliceblue;
+}
+
+.footer-centrado{
+  position: relative;
+  top:20%;
 }
