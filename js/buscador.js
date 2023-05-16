@@ -23,8 +23,11 @@ let campoBusqueda = document.querySelector("#searchbar");
 formularioBusqueda.addEventListener("submit", (eventito)=>{
   eventito.preventDefault();
   if(campoBusqueda.value != null) {
+      let contenedorCards = document.querySelector('#listaJuegos')
+      console.log(contenedorCards)
       let contenedor = document.querySelector("#filaJuegos");
       let resultados = 0;
+      contenedorCards.innerHTML = "";
       contenedor.innerHTML = "";
       lista_de_juegos.forEach(Videojuego => {
           if( Videojuego.nombre.toUpperCase().trim().includes(campoBusqueda.value.toUpperCase()) || 
@@ -34,7 +37,6 @@ formularioBusqueda.addEventListener("submit", (eventito)=>{
               resultados++
           }
       });
-      if(resultados === 0) contenedor.innerHTML = '<h1 class="text-center p-2">La busqueda no dio resultados</h1>';
+      if(resultados === 0) contenedorCards.innerHTML = '<h1 class="text-center p-2">La busqueda no dio resultados</h1>';
   }
-
 });

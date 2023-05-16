@@ -71,12 +71,10 @@ export default class Videojuego{
 
     imprimirCard(){
         let contenedorCards = document.getElementById('listaJuegos')
-        contenedorCards.innerHTML = ''
         let card = document.createElement('aside')
-        card.className='d-flex justify-content-center mb-5'
-        card.innerHTML = `
-        <aside class="col-md-6 col-lg-3 mb-3">
-        <article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
+        card.className='col-md-6 col-lg-3 mb-3 mb-5'
+        card.innerHTML = 
+        `<article class="card w-100 h-100 rounded-0 border-0 cards-disenio">
           <img src="${this.imagen}" class="card-img-top rounded-0"/>
           <div class="card-body">
             <h5 class="card-title">${this.nombre}</h5>
@@ -85,11 +83,10 @@ export default class Videojuego{
             </p>
             <button class="btn btn-red rounded-0 text-light" onclick="enviarDetalleJuego('${this.codigo}')">Detalles</button>
           </div>
-        </article>
-      </aside>
-    `    
+        </article>`
+    
       contenedorCards.appendChild(card)
-      }
+    }
 
     toJSON(){
         return{
