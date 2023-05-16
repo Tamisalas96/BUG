@@ -1,5 +1,15 @@
 import Videojuego from "./classVideojuego.js";
 import { sumarioValidaciones } from "./helpers.js";
+
+
+let usuarioLogeado = JSON.parse(sessionStorage.getItem("perfil")) || {};
+if(usuarioLogeado.email === "admin@admin.com"){
+    
+}else{
+    window.location.href = window.location.origin + "/index.html"
+}
+
+
 // variables
 let formJuegos = document.getElementById("formJuegos");
 let codigo = document.getElementById("codigo"),
@@ -41,6 +51,9 @@ cargaInicial();
 function guardarLocal() {
   localStorage.setItem("lista_de_juegos", JSON.stringify(lista_de_juegos));
 }
+window.borrarSessionStorage = () => {
+    sessionStorage.clear();
+}
 function cargaInicial() {
   if (lista_de_juegos.length > 0) {
     //dibujar las filas de la tabla
@@ -72,12 +85,18 @@ function crearFila(videojuego, indice) {
 ><button
   type="button"
   class="btn btn-red w-auto text-light mx-1"
-  onclick="borrarJuego('${videojuego.codigo}')">
+  onclick="borrarVideojuego('${videojuego.codigo}')">
   <i class="bi bi-trash-fill"></i>
 </button>
 </td>
 </tr>`;
 }
+
+function borrarFila(indice){
+    let tablaVideojuegos = document.querySelector("tbody");
+    tablaVideojuegos.removeChild(tablaVideojuegos.children[indice]);
+}
+
 function limpiarForm() {
   formJuegos.reset();
 }
@@ -204,3 +223,25 @@ function editarVideojuego() {
     }
   });
 }
+
+window.borrarVideojuego = (codigo) => {
+    Swal.fire({
+      title: "Eliminar el videojuego de la lista?",
+      text: "El videojuego se borrará de forma permanente.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#b9090b",
+      confirmButtonText: "Borrar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+        let indiceVideojuego = lista_de_juegos.findIndex(
+          (videojuego) => videojuego.codigo === codigo
+        );
+        lista_de_juegos.splice(indiceVideojuego, 1);
+        guardarLocal();
+        borrarFila(indiceVideojuego);
+        Swal.fire("Videojuego Eliminado", "El videojuego se ha eliminado satisfactoriamente", "success");
+      }      
+    });
+};

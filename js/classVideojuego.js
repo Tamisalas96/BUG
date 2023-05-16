@@ -69,6 +69,23 @@ export default class Videojuego{
         this.#desarrollador = desarrollador;
     }
 
+    imprimirCard(){
+        let contenedorCards = document.getElementById('filaJuegos')
+        let card = document.createElement('aside')
+        card.className='col-12 col-md-4 d-flex justify-content-center mb-5'
+        card.innerHTML = `
+        <div class="card">
+        <img src="${this.imagen}" class="card-img-top d-inline-block" alt="...">
+        <div class="card-body d-flex flex-column justify-content-between ">
+          <h5 class="card-title">${this.nombre}</h5>
+          <p class="card-text card-description">${this.descripcion}</p>
+          <p class="card-text text-start"><small class="text-body-secondary"><i class="bi bi-clock text-danger"></i>${this.categoria}</small></p>
+          <a href="../pages/${this.codigo}.html" class="btn css-button-sliding-to-left--red align-self-start">Ver mas</a>
+        </div>
+        </div>`    
+      contenedorCards.appendChild(card)
+      }
+
     toJSON(){
         return{
             codigo: this.codigo,
