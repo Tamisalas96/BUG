@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <script src="https://kit.fontawesome.com/61b9fbaaa5.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,51 +26,33 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg colorNav">
-        <div class="container-fluid">
-         <img src="../img/Bug (1).png" alt="logo bug" width="150px">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+        <div class="container-fluid color">
+            <img src="../img/Bug (1).png" alt="logo bug" width="150px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
-                  >Inicio</a
-                >
+                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./nosotros.html">Acerca de nosotros</a>
-              </li>
+                <a class="nav-link" href="/pages/nosotros.html">Acerca de nosotros</a>
+              </li> 
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./login.html">Login</a>
+                <a class="nav-link" aria-current="page" href="/pages/login.html">Login</a>
+              </li>
               </li>
               <li class="nav-item dropdown">
                 <span class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-moon-stars-fill"></i>
+                  <i class="fa-sharp fa-solid fa-moon"></i>
                 </span>
                 <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" id="btnThemeDark" ><i class="bi bi-moon-stars-fill"></i> Dark</button></li>
-                  <li><button class="dropdown-item" id="btnThemeLight"><i class="bi bi-brightness-high-fill"></i> Light</button></li>
+                  <li><button class="dropdown-item" id="btnThemeDark" ><i class="fa-sharp fa-solid fa-moon"></i> Dark</button></li>
+                  <li><button class="dropdown-item" id="btnThemeLight"><i class="fa-regular fa-sun"></i> Light</button></li>
                 </ul>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Buscar..."
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-dark" type="submit">Buscar</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -78,18 +61,18 @@
       <section class="container-fluid my-3">
         <h2 class="text-center">Administrador de juegos</h2>
         <hr />
-        <p>
-          Agregar juego:
+        <div class="text-end container">
           <button
             id=""
-            class="btn btn-outline-success"
+            class="btn btn-red rounded-0 text-light"
             data-bs-toggle="modal"
             data-bs-target="#modal-admin-juegos"
           >
+            agregar juego
             <i class="bi bi-controller"></i>
           </button>
-        </p>
-        <h3>lista de juegos</h3>
+        </div>
+        <h2 class="display-4">Lista de juegos</h2>
         <hr />
         <article class="table-responsive">
           <table class="table table-striped table-hover">
@@ -100,57 +83,11 @@
                 <th scope="col">Descripción</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Categoria</th>
+                <th scope="col">Desarrolador</th>
                 <th scope="col">Opciones</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Resident Evil 4</td>
-                <td class="text-truncate ancho pe-5">
-                  Resident Evil 4 es un videojuego de acción-aventura de
-                  disparos en tercera persona perteneciente al subgénero de
-                  terror y supervivencia desarrollado por Capcom y estrenado el
-                  24 de marzo del 2023. El videojuego es una nueva versión del
-                  videojuego de 2005 del mismo nombre.
-                </td>
-                <td class="text-truncate ancho pe-5">5000$</td>
-                <td>Aventura</td>
-                <td>
-                  <button type="button" class="btn btn-success mx-1">
-                    <i class="bi bi-pencil-fill"></i></button
-                  ><button
-                    type="button"
-                    class="btn btn-danger mx-1"
-                  >
-                  <i class="bi bi-trash-fill"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Resident Evil 4</td>
-                <td class="text-truncate ancho pe-5">
-                  Resident Evil 4 es un videojuego de acción-aventura de
-                  disparos en tercera persona perteneciente al subgénero de
-                  terror y supervivencia desarrollado por Capcom y estrenado el
-                  24 de marzo del 2023. El videojuego es una nueva versión del
-                  videojuego de 2005 del mismo nombre.
-                </td>
-                <td class="text-truncate ancho pe-5">5000$</td>
-                <td>Aventura</td>
-                <td>
-                  <button type="button" class="btn btn-success mx-1">
-                    <i class="bi bi-pencil-fill"></i></button
-                  ><button
-                    type="button"
-                    class="btn btn-danger mx-1"
-                  >
-                  <i class="bi bi-trash-fill"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </article>
         <!-- Modal Administrar Juegos -->
@@ -161,7 +98,7 @@
           aria-labelledby="Modal_Label"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="Modal_Label">
@@ -175,7 +112,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form id="formPelicula">
+                <form id="formJuegos">
                   <div class="row g-3">
                     <div class="col-12">
                       <label for="codigo" class="form-label">Código</label>
@@ -184,6 +121,7 @@
                         class="form-control"
                         aria-label="codigo"
                         id="codigo"
+                        disabled
                       />
                     </div>
                     <div class="col-12">
@@ -192,11 +130,10 @@
                         type="text"
                         class="form-control"
                         placeholder="Ej: Super Mario Bros"
-                        aria-label="nombre
-                          id="
-                        nombre
-                        maxlength="30"
-                        minlength="3"
+                        aria-label="nombre"
+                        id="nombre"
+                        maxlength="1000"
+                        minlength="1"
                       />
                     </div>
                     <div class="col-12">
@@ -210,41 +147,43 @@
                         aria-label="descripcion"
                         id="descripcion"
                         maxlength="1000"
-                        minlength="3"
+                        minlength="1"
                       ></textarea>
                     </div>
                     <div class="col-12">
-                      <div class="col-12">
-                        <label for="categoria" class="form-label"
-                          >Categoria *</label
-                        >
-                        <select
-                          class="form-select"
-                          aria-label="categoria"
-                          id="categoria"
-                        >
-                          <option selected value="">
-                            Seleccione una opción
-                          </option>
-                          <option value="sandbox">sandbox</option>
-                          <option value="simulación">simulación</option>
-                          <option value="fabricación">fabricación</option>
-                          <option value="construcción">construcción</option>
-                          <option value="aventura">aventura</option>
-                        </select>
-                      </div>
-                      <div class="col-12">
-                        <label for="precio" class="form-label">Precio *</label>
-                        <input
-                          type="number"
-                          class="form-control"
-                          aria-label="precio"
-                          placeholder="5000"
-                          id="precio"
-                          min="1"
-                          max="10000"
-                        />
-                      </div>
+                      <label for="categoria" class="form-label"
+                        >Categoria *</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="categoria"
+                        id="categoria"
+                        maxlength="1000"
+                        minlength="1"
+                      >
+                        <option selected disabled value="">
+                          Seleccione una opción
+                        </option>
+                        <option value="sandbox">sandbox</option>
+                        <option value="simulacion">simulación</option>
+                        <option value="fabricacion">fabricación</option>
+                        <option value="construccion">construcción</option>
+                        <option value="aventura">aventura</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="precio" class="form-label">Precio *</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        aria-label="precio"
+                        placeholder="5000"
+                        id="precio"
+                        min="1"
+                        max="1000000"
+                      />
+                    </div>
+                    <div>
                       <label for="imagen" class="form-label">Imágen</label>
                       <input
                         type="text"
@@ -252,25 +191,46 @@
                         placeholder="https://upload.wikimedia.org/wikipedia/commons/5/52/Spider-Man.jpg"
                         aria-label="imagen"
                         id="imagen"
-                        maxlength="300"
-                        minlength="3"
+                        maxlength="1000"
+                        minlength="1"
                       />
                     </div>
-                    <div class="col-12"></div>
                     <div class="col-12">
-                      <label for="desarrolador" class="form-label"
+                      <label for="desarrollador" class="form-label"
                         >Desarrolador</label
                       >
                       <input
                         type="text"
                         class="form-control"
-                        aria-label="desarrolador"
+                        aria-label="desarrollador"
                         placeholder="Nintendo"
-                        id="desarrolador"
+                        id="desarrollador"
                       />
                     </div>
-
-                    <button id="" type="submit" class="btn btn-outline-success">
+                    <div class="col-12">
+                      <label for="requisitos" class="form-label"
+                        >Requisitos</label
+                      >
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        placeholder=""
+                        aria-label="requisitos"
+                        id="requisitos"
+                        maxlength="1000"
+                        minlength="1"
+                      ></textarea>
+                    </div>
+                    <div
+                      class="alert alert-danger d-none"
+                      id="alertError"
+                      role="alert"
+                    ></div>
+                    <button
+                      id=""
+                      type="submit"
+                      class="btn btn-outline-dark rounded-0 btn-red w-100"
+                    >
                       Enviar
                     </button>
                   </div>
@@ -281,26 +241,38 @@
         </div>
       </section>
     </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <footer class="text-secondary py-4 colorNav container-fluid" >
+    <footer class="text-secondary py-4 colorNav container-fluid">
       <section class="row d-flex">
-        <aside class="col-lg-4"> <img src="../img/Bug (1).png" alt="logo bug" class="logo" width="150px"> </aside>
-        <aside class="col-lg-4"> <h5 class="text-light text-center footer-centrado">&#169 Todos los derechos reservados</h5></aside>
         <aside class="col-lg-4">
-          <a class="text-light text-center footer-centrado" href="./pages/error404.html"><h5>Acerca de nosotros</h5></a>
+          <img
+            src="../img/Bug (1).png"
+            alt="logo bug"
+            class="logo"
+            width="150px"
+          />
+        </aside>
+        <aside class="col-lg-4">
+          <h5 class="text-light text-center footer-centrado">
+            &#169 Todos los derechos reservados
+          </h5>
+        </aside>
+        <aside class="col-lg-4">
+          <a
+            class="text-light text-center footer-centrado"
+            href="./pages/error404.html"
+            ><h5>Acerca de nosotros</h5></a
+          >
         </aside>
       </section>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  <script src="../js/tema.js"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="../js/admin.js" type="module"></script>
+    <script src="../js/tema.js"></script>
   </body>
 </html>

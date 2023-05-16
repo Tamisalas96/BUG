@@ -9,7 +9,23 @@ let temaConfigurado = JSON.parse(localStorage.getItem('tema')) || 'dark';
 cambiarTema(temaConfigurado);
 
 function cambiarTema(color){
-    console.log(color)
+
 document.querySelector('html').setAttribute('data-bs-theme', color);
+
+let iconoTema = document.querySelector("i");
+    if(color === 'dark'){
+        iconoTema.classList.add('fa-sharp')
+        iconoTema.classList.add('fa-solid')
+        iconoTema.classList.add('fa-moon')
+        iconoTema.classList.remove('fa-regular')
+        iconoTema.classList.remove('fa-sun')
+    };
+    if(color === 'light'){
+        iconoTema.classList.add('fa-regular')
+        iconoTema.classList.add('fa-sun')
+        iconoTema.classList.remove('fa-sharp')
+        iconoTema.classList.remove('fa-solid')
+        iconoTema.classList.remove('fa-moon')
+    };
 localStorage.setItem('tema', JSON.stringify(color));
 }
