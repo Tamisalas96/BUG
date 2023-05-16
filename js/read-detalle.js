@@ -5,7 +5,7 @@ const seccionDetalle =  document.getElementById('detalleJuego');
 
 
 let usuarioLogeado = JSON.parse(sessionStorage.getItem("perfil")) || {};
-if(usuarioLogeado.email.length > 0){
+if(usuarioLogeado.email){
     seccionDetalle.innerHTML = `
     <aside class="col-md-6 col-lg-6 mb-5">
       <article class="card h-100 card-login rounded-0 border-0">
@@ -45,14 +45,14 @@ if(usuarioLogeado.email.length > 0){
       <article class="card card-login rounded-0 border-0 container h-100">
           <h2 class="mt-3">Reseña</h2>
           <hr>
-          <form class="needs-validation" id="form-comentario">
+          <form id="form-comentario">
               <div>
                 <p class="form-label fw-bold">${usuarioLogeado.email}</p>
               </div>
               <hr>
               <div>
                 <label for="comentario" class="form-label">Comentario:</label>
-                <textarea class="form-control needs-validation rounded-0" novalidated id="comentario" name="comentario" minlength ="5" required></textarea>
+                <textarea class="form-control rounded-0" id="comentario" name="comentario" minlength ="5" required></textarea>
                 <div class="valid-feedback"><i class="bi bi-person-check-fill"></i></i></div>
                 <div class="invalid-feedback">Ingrese un comentario</div>
               </div>
@@ -82,7 +82,6 @@ if(usuarioLogeado.email.length > 0){
         </div>
       </article>
      </aside>
-
     `
 }else{
     seccionDetalle.innerHTML = `
@@ -112,7 +111,7 @@ if(usuarioLogeado.email.length > 0){
           </article>
         </aside>
         <aside>
-          <article class="card h-100 card-login rounded-0 border-0">
+          <article class="card h-100 card-login rounded-0 border-0 mt-4">
             <div class="card-body">
               <h2 class="card-title">Jugar ${juegoBuscado.nombre}</h2>
                 <h5 class="">$ ${juegoBuscado.precio}</h5>
