@@ -124,45 +124,45 @@
       </section>
       <div class="modal" tabindex="-1" id="modal">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header bg-danger">
-              <h5 class="modal-title">Crear nuevo usuario</h5>
+          <div class="modal-content rounded-0 border-0 card-login">
+            <div class="modal-header colorNav rounded-0">
+              <h5 class="modal-title text-light">Crear nuevo usuario</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="formUser" class="container">
+                <form id="formUser" class="container-fluid">
                     <div class="row mt-3">
                         <div class="col">
                             <label>Nombre</label>
-                            <input type="text" class="form-control" id="nombre" required placeholder="Escriba su nombre" minlength="2" maxlength="100" min="2" max="100">
+                            <input type="text" class="form-control rounded-0" id="nombre" required placeholder="Escriba su nombre" minlength="2" maxlength="100" min="2" max="100">
                             <div class="col">
                                 <label>Apellido</label>
-                               <input type="text" class="form-control" id="apellido" required placeholder="Escriba su apellido">
+                               <input type="text" class="form-control rounded-0" id="apellido" required placeholder="Escriba su apellido">
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col">
                             <label>Email</label>
-                            <input type="email" class="form-control" id="email2" required minlength="5" maxlength="100" autofocus placeholder="Escriba su email" min="5" max="100"> 
+                            <input type="email" class="form-control rounded-0" id="email2" required minlength="5" maxlength="100" autofocus placeholder="Escriba su email" min="5" max="100"> 
                          </div>
                     </div>
                     <div class="row mt-3">
                          <div class="col">
                             <label>Usuario</label>
-                            <input type="text" class="form-control" id="usuario" required minlength="5" maxlength="20" required placeholder="Escriba un nombre de usuario" min="5" max="20">
+                            <input type="text" class="form-control rounded-0" id="usuario" required minlength="5" maxlength="20" required placeholder="Escriba un nombre de usuario" min="5" max="20">
                         </div>
                     </div>
                       <div class="row mt-3">
                         <div class="col">
                          <label>Contraseña</label>
-                         <input type="password" class="form-control" id="contraseña" required minlength="5" maxlength="120" placeholder="Escriba una contraseña">
+                         <input type="password" class="form-control rounded-0" id="contraseña" required minlength="5" maxlength="120" placeholder="Escriba una contraseña">
                         </div>
                       </div>
                       
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-danger" id="crearUsuario">Crear Usuario</button>
+                    <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-red rounded-0 text-light" id="crearUsuario">Crear usuario</button>
                   </div>
                   </form>
             </div>
