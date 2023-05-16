@@ -1,5 +1,15 @@
 import Videojuego from "./classVideojuego.js";
 import { sumarioValidaciones } from "./helpers.js";
+
+
+let usuarioLogeado = JSON.parse(sessionStorage.getItem("perfil")) || {};
+if(usuarioLogeado.email === "admin@admin.com"){
+    
+}else{
+    window.location.href = window.location.origin + "/index.html"
+}
+
+
 // variables
 let formJuegos = document.getElementById("formJuegos");
 let codigo = document.getElementById("codigo"),
@@ -40,6 +50,9 @@ cargaInicial();
 // funciones
 function guardarLocal() {
   localStorage.setItem("lista_de_juegos", JSON.stringify(lista_de_juegos));
+}
+window.borrarSessionStorage = () => {
+    sessionStorage.clear();
 }
 function cargaInicial() {
   if (lista_de_juegos.length > 0) {
