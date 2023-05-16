@@ -42,7 +42,7 @@ function login(e){
   if (email.value === administrador.email && inputPassword.value === administrador.contrasena){
     sessionStorage.setItem('perfil', JSON.stringify(administrador))
     perfilSeleccionado = JSON.parse(sessionStorage.getItem(administrador));
-    window.location.href = window.location.origin + '/pages/admin.html';
+    window.location.href = window.location.origin + '/BUG/pages/admin.html';
   } else {
     sessionStorage.setItem('perfil', JSON.stringify(usuario))
     perfilSeleccionado = JSON.parse(sessionStorage.getItem(usuario));
